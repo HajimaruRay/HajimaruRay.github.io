@@ -1,14 +1,9 @@
-.body
+body
 {
-    background-color: violet;
+    background-color: rgba(50, 50, 50, 0.756);
 }
 
-.profile_link
+.profile_link 
 {
-    #Github_profile
-    {
-        position: absolute;
-        margin-left: 5px;
-        margin-top: 10px;
-    }
+    margin-left: 10px;
 }
