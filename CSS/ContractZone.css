@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    font-family: "Oswald", sans-serif;
+}
+
 .profile_link 
 {
     #The_Line
     {
-        margin-right: 0px;
         padding-right: 0px;
-        margin-left: 0px;
         padding-left: 0px;
         height: 10px;
         border-width: 0px;
@@ -22,4 +25,9 @@
 {
     text-align: center;
     margin-left: 10px;
+    transition: transform 0.5s ease;
+}
+
+.Logo .photo:hover {
+    transform: translateY(-3px); /* Move the button 5px up */
 }
