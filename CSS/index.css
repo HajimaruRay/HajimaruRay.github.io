@@ -9,12 +9,13 @@
 .ContentZone .Hello-Text h1{
     text-align: center;
     font-size: 100px;
+    filter: drop-shadow(4px 4px 4px black);
     color: #242424;
 }
 .ContentZone .Hello-Text h3{
     text-align: center;
     font-size: 40px;
-
+    filter: drop-shadow(2px 2px 2px black);
     color: #242424;
 }
 .ContentZone #The_Line{
@@ -37,7 +38,7 @@
 }
 
 .ContentZone .button:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 .ContentZone .button a{
     text-decoration: none;
@@ -53,8 +54,9 @@
 }
 .ContentZone .Games_Logo .GameLogo{
     border-radius: 10%;
+    filter: drop-shadow(6px 6px 6px black);
     transition: transform 0.3s ease;
 }
 .ContentZone .Games_Logo .GameLogo:hover {
-    transform: translateY(-3px);
+    transform: translateY(-8px);
 }
