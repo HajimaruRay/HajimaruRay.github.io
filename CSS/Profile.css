@@ -67,3 +67,9 @@
 {
     padding-left: 4%;
 }
+
+.Profile_Text_Base #Email
+{
+    color: black;
+    text-decoration: none;
+}
