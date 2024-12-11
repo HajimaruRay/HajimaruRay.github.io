@@ -3,21 +3,24 @@
     font-family: "Oswald", sans-serif;
 }
 
+table, tr, td{
+    /*border: 1px solid black;
+    border-collapse: collapse;*/
+    display: flex;
+    justify-content: center;
+}
+th, td{
+    padding: 15px;
+}
 #Photo
 {
-    display: block;
-    margin-top: -3%;
-    margin-bottom: -3%;
-    margin: 3% auto;
-    width: 15%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 250px;
+    height: 260px;
     border-radius: 15%;
     border: 3px solid black;
-}
-
-.Profile_Text_Base
-{
-    padding-left: 6%;
-    padding-right: 6%;
 }
 
 .Profile_Text_Base #The_Line
