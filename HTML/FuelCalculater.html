@@ -27,10 +27,13 @@
     
     <!--Content Zone-->
     <div class="contentZone" >
-        <input id="fuelPrice" type="text" placeholder="ราคาน้ำมันปัจจุบัน" required><br>
-        <input id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
-        <input id="kmPerliter" type="text" placeholder="กิโลเมตร/ลิตร"><br>
-        <button id="button" onclick="fuelcal()">คำนวณ</button>
+        <a>ราคาน้ำมัน :</a>
+        <input class = "text-field" id="fuelPrice" type="text" placeholder="ราคาน้ำมันปัจจุบัน" required><br>
+        <a>ราคาที่ต้องการเติม :</a>
+        <input class = "text-field" id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
+        <a>อัตราสิ้นเปลืองน้ำมัน :</a>
+        <input class = "text-field" id="kmPerliter" type="text" placeholder="กิโลเมตร/ลิตร"><br>
+        <button class = "botton" id="button" onclick="fuelcal()">คำนวณ</button>
         <p id="result"></p>
     </div>
 
