@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chonlatree Portfilo</title>
+    
+    <link rel="shortcut icon" sizes="114x114" href="/Photo/icon/Logo-DeleteBackGround.png"type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/Navbar.css">
+    <link rel="stylesheet" href="/CSS/ContractZone.css">
+    <link rel="stylesheet" href="/CSS/FuelCalculater.css">
+
+    
+</head>
+<body>
+    <script src="/Json/FuelCalculater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <div class="Name"><a>Chonlatree Ketkorwoing</a></div>
+        <ul>
+                <li class="link"> <a href="/index.html">Home</a> </li>
+                <li class="link"> <a href="/HTML/Profile.html">Profile</a> </li>
+        </ul>
+    </div>
+    
+    <!--Content Zone-->
+    <div class="contentZone" >
+        <input id="fuelPrice" type="text" placeholder="ราคาน้ำมันปัจจุบัน" required><br>
+        <input id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
+        <input id="kmPerliter" type="text" placeholder="กิโลเมตร/ลิตร"><br>
+        <button id="button" onclick="fuelcal()">คำนวณ</button>
+        <p id="result"></p>
+    </div>
+
+    <!--Contract Zone-->
+    <div class="profile_link">
+        <br>
+        <hr id="The_Line">
+        <br>
+        <div class="Logo">
+            <ul>
+                <li>
+                    <a id="Text-contract">--Contract Me--</a>
+                </li>
+                <a href="https://github.com/HajimaruRay" target="_blank">
+                    <img class="photo" src="/Photo/icon/Github.png" width="40px" alt="github">
+                </a>
+                <a href="https://www.facebook.com/hajimaruuu" target="_blank">
+                    <img class="photo" src="/Photo/icon/facebook.png" width="40px" alt="facebook">
+                </a>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
