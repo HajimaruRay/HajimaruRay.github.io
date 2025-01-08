@@ -20,7 +20,16 @@
     width: 100px;
     height: 35px;
     font-size: 15px;
+    margin-left: 10px;
     border: 2px solid #969696;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+}
+
+.contentZone .botton:hover{
+    background-color: #d7d7d7;
+    transform: translateY(-2px);
 }
 
 .contentZone #result{
