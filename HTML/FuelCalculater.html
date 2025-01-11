@@ -34,7 +34,12 @@
         <a>ราคาที่ต้องการเติม :</a>
         <input class = "text-field" id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
         <a>อัตราสิ้นเปลืองน้ำมัน :</a>
-        <input class = "text-field" id="kmPerliter" type="text" placeholder="กิโลเมตร/ลิตร"><br>
+        <input class = "text-field" id="kmPerliter" type="text">
+        <select id="selector" >
+            <option value="Km/L">Km/L</option>
+            <option value="L/100Km">L/100Km</option>
+        </select>
+        <br>
         <button class = "botton" id="button" onclick="fuelcal()">Calculate</button>
         <button class = "botton" id="button" onclick="clearInputs()">Clear</button>
         <button class="botton" id="button" onclick="downloadExcel()">Download</button>

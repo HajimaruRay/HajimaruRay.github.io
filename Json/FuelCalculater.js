@@ -3,11 +3,21 @@ let calculationData = {};
 function fuelcal(){
     var fuelPrice = document.getElementById("fuelPrice").value;
     var amount = document.getElementById("amount").value;
-    var kmPerliter = document.getElementById("kmPerliter").value;
+    var kmPerliter = "";
     fuelPrice = parseFloat(fuelPrice, 10);
     amount = parseFloat(amount, 10);
 
-    if((!isNaN(fuelPrice) && !isNaN(amount)) && kmPerliter == "" || isNaN(kmPerliter)){
+    if (document.getElementById("selector").value === 'Km/L') {
+        kmPerliter = parseFloat(document.getElementById("kmPerliter").value);
+    } else {
+        kmPerliter = 100 / parseFloat(document.getElementById("kmPerliter").value);
+    }
+
+    console.log(kmPerliter, document.getElementById("selector").value);
+
+
+
+    if((!isNaN(fuelPrice) && !isNaN(amount)) && (kmPerliter == "" || isNaN(kmPerliter))){
         kmPerliter = 0;
         var calculateLiterAmount = amount/fuelPrice;
         document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + amount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterAmount.toFixed(2) + " ลิตร";
