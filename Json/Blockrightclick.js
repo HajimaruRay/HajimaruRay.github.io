@@ -4,7 +4,7 @@ document.addEventListener("contextmenu", function(event) {
 });
 
 document.addEventListener("keydown", function(event) {
-    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I") || (event.ctrlKey && event.key === "U")) {
+    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I") || (event.ctrlKey && event.key === "U") || (event.ctrlKey && event.shiftKey && event.key === 'C')) {
         event.preventDefault();
         alert("Inspect element is disabled.");
     }
