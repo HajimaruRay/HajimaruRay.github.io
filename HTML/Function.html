@@ -8,15 +8,14 @@
     <link rel="shortcut icon" sizes="114x114" href="/Photo/icon/Logo-DeleteBackGround.png"type="image/x-icon">
     <link rel="stylesheet" href="/CSS/Navbar.css">
     <link rel="stylesheet" href="/CSS/ContractZone.css">
-    <link rel="stylesheet" href="/CSS/FuelCalculater.css">
+    <link rel="stylesheet" href="/CSS/Function.css">
 
     
 </head>
 <body>
 
     <script src="/Json/Blockrightclick.js"></script>
-    <script src="/Json/FuelCalculater.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="/Json/Password.js"></script>
 
     <!--Navbar-->
     <div class="Navbar">
@@ -29,16 +28,13 @@
     
     <!--Content Zone-->
     <div class="contentZone" >
-        <a>ราคาน้ำมัน :</a>
-        <input class = "text-field" id="fuelPrice" type="text" placeholder="ราคาน้ำมันปัจจุบัน" required><br>
-        <a>ราคาที่ต้องการเติม :</a>
-        <input class = "text-field" id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
-        <a>อัตราสิ้นเปลืองน้ำมัน :</a>
-        <input class = "text-field" id="kmPerliter" type="text" placeholder="กิโลเมตร/ลิตร"><br>
-        <button class = "botton" id="button" onclick="fuelcal()">Calculate</button>
-        <button class = "botton" id="button" onclick="clearInputs()">Clear</button>
-        <button class="botton" id="button" onclick="downloadExcel()">Download</button>
-        <p id="result"></p>
+        <a>User Name :</a>
+        <input class="text-field" id="username-field" type="text" placeholder="User Name" required><br>
+        <a>Password :</a>
+        <input class="text-field" id="password-field" type="password" placeholder="Password" required>
+        <button class="button-seethrough" id="button-seethrough" onclick="seethrough()">👁️</button><br>
+        <button class="button" id="password-button" onclick="passwordCheck()"><a style="font-size: 15px;">Login</a></button><br>
+        <a style="text-align: center; font-size: 20px;" id="alartMessage"></a>
     </div>
 
     <!--Contract Zone-->
