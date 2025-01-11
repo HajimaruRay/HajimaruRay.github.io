@@ -75,3 +75,19 @@ function downloadExcel() {
         XLSX.writeFile(wb, 'fuel_calculation.xlsx');
     }
 }
+
+window.onload = function() {
+    try {
+        // Check if the user is logged in by accessing sessionStorage
+        if (sessionStorage.getItem('isLogin') === 'false' || sessionStorage.getItem('isLogin') === null) {
+            console.log("Not logged in. Redirecting to index.html...");
+            window.location.href = "/index.html"; // Adjust the path as needed
+        } else {
+            console.log("User is logged in.");
+        }
+    } catch (error) {
+        // Handle any errors accessing sessionStorage (e.g., if it's unavailable)
+        console.error("Error accessing sessionStorage. Redirecting to index.html.");
+        window.location.href = "/index.html"; // Redirect to login page
+    }
+};
