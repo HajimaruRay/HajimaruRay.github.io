@@ -1,6 +1,11 @@
 var correctUserName = ["HajimaruRay"];
 var correctPassword = ["Hajimaruray6872"];
 
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        passwordCheck();
+    }
+});
 function passwordCheck(){
     let password = document.getElementById("password-field").value;
     let username = document.getElementById("username-field").value;
@@ -38,8 +43,18 @@ function seethrough(){
     }
 }
 
-window.onload = function() {
-    if(sessionStorage.getItem('isLogin') === 'true'){
-        window.location.href = "FuelCalculater.html";
-    }
+function Logout(){
+    sessionStorage.setItem('isLogin','false');
+    console.log(sessionStorage.getItem('isLogin'));
+    window.location.href = "/index.html"
 }
+
+window.onload = function() {
+    if (sessionStorage.getItem('isLogin') === 'true') {
+        const currentPath = window.location.pathname;
+        console.log(currentPath);
+        if (currentPath !== '/FuelCalculater.html' && currentPath !== '/HTML/FuelCalculater.html') {
+            window.location.href = "FuelCalculater.html";
+        }
+    }
+};
