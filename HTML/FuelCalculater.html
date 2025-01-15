@@ -16,11 +16,17 @@
 
     <script src="/Json/FuelCalculater.js"></script>
     <script src="/Json/Password.js"></script>
+    <script src="/Json/DropDown.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
 
     <!--Navbar-->
     <div class="Navbar">
         <div class="Name"><a>Chonlatree Ketkorwoing</a></div>
+        <select class="selector" onchange="window.location.href=this.value;">
+            <option value="/index.html">Home</option>
+            <option value="/HTML/FuelCalculater.html">FuelCalculater</option>
+        </select>
+        <a class="logout" style=" border-radius: 4px; padding: 4px 12px; background-color: white; color: black; margin-left: 10px;" onclick="Logout()">Logout</a>
         <ul>
             <li class="link"><a href="/index.html">Home</a></li>
             <li class="link"><a href="/HTML/FuelCalculater.html">FuelCalculater</a> </li>
