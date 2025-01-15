@@ -39,6 +39,7 @@
 @media (max-width: 768px) {
     .contentZone{
         text-align: center;
+        font-size: 15px;
     }
     
     .contentZone .text-field{
@@ -64,6 +65,10 @@
     .contentZone .botton:hover{
         background-color: #d7d7d7;
         transform: translateY(-2px);
+    }
+
+    .contentZone #selector{
+        width: 40px;
     }
     
     .contentZone #result{

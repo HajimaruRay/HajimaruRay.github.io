@@ -58,6 +58,10 @@
         transition: transform 0.3s;
     }
 
+    .Logo .photo{
+        width: 30px;
+    }
+
     .Logo .photo:hover {
         transform: translateY(-2px);
     }
