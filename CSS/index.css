@@ -60,3 +60,28 @@
 .ContentZone .Games_Logo .GameLogo:hover {
     transform: translateY(-8px);
 }
+
+
+@media (max-width: 768px) {
+    .ContentZone .Hello-Text h1 {
+        font-size: 60px;
+    }
+
+    .ContentZone .Hello-Text h3 {
+        font-size: 30px;
+    }
+
+    .ContentZone #The_Line {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 5px;
+    }
+
+    .ContentZone .button {
+        padding: 12px 15px;
+    }
+
+    .ContentZone .Games_Logo .GameLogo {
+        width: 50%;
+    }
+}

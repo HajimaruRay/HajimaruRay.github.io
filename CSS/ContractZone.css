@@ -25,9 +25,40 @@
 {
     text-align: center;
     margin-left: 10px;
-    transition: transform 5s ease;
+    transition: transform 0.3s;
 }
 
 .Logo .photo:hover {
-    transform: translateY(-3px); /* Move the button 5px up */
+    transform: translateY(-2px); /* Move the button 5px up */
+}
+
+@media (max-width: 768px) {
+    .profile_link 
+    {
+        #The_Line
+        {
+            padding-right: 0px;
+            padding-left: 0px;
+            height: 5px;
+            border-width: 0px;
+            color:rgb(0, 0, 0);
+            background-color:rgb(0, 0, 0)
+        }
+
+        #Text-contract
+        {
+            font-size: large;
+        }
+    }
+
+    .Logo
+    {
+        text-align: center;
+        margin-left: 10px;
+        transition: transform 0.3s;
+    }
+
+    .Logo .photo:hover {
+        transform: translateY(-2px);
+    }
 }

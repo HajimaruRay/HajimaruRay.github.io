@@ -4,8 +4,8 @@
 }
 
 table, tr, td{
-    /*border: 1px solid black;*/
-    /*border-collapse: collapse;*/
+    /*border: 1px solid black;
+    border-collapse: collapse;*/
     display: flex;
     justify-content: center;
 }
@@ -75,4 +75,74 @@ th, td{
 {
     color: black;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    th, td{
+        padding: 5px;
+    }
+    #Photo
+    {
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 150px;
+        height: 160px;
+        border-radius: 8%;
+        border: 1=2px solid black;
+    }
+    
+    .Profile_Text_Base #The_Line
+    {
+        margin-left: 3%;
+        margin-right: 3%;
+        height: 1.5px;
+        border-width: 0px;
+        color:rgb(0, 0, 0);
+        background-color:rgb(0, 0, 0)
+    }
+    
+    .Profile_Text_Base #Hi_Text
+    {
+        font-size: 30px;
+        padding-left: 4%;
+    }
+    
+    .Profile_Text_Base #About_Me
+    {
+        padding-top: 1%;
+        padding-left: 4%;
+        font-size: 20px;
+    }
+    
+    .Profile_Text_Base #SubClassOfAboutMe
+    {
+        padding-left: 4%;
+        margin-bottom: 1%;
+        font-size: 15px;
+    }
+    
+    .Profile_Text_Base #ProgrammingLanguage
+    {
+        padding-top: 1%;
+        padding-left: 4%;
+        font-size: 20px;
+    }
+    
+    .Profile_Text_Base #LanguageLogo
+    {
+        margin-top: 1%;
+        width: 25px;
+    }
+    
+    .Profile_Text_Base .CodeLogo
+    {
+        padding-left:2%;
+    }
+    
+    .Profile_Text_Base #Email
+    {
+        color: black;
+        text-decoration: none;
+    }
 }

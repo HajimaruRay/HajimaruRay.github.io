@@ -35,3 +35,38 @@
 .contentZone #result{
     font-size: 25px;
 }
+
+@media (max-width: 768px) {
+    .contentZone{
+        text-align: center;
+    }
+    
+    .contentZone .text-field{
+        box-sizing: border-box;
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+        margin: 20px 0px 10px 0px;
+        border: 2px solid #969696;
+    }
+    
+    .contentZone .botton{
+        width: 80px;
+        height: 30px;
+        font-size: 15px;
+        margin-left: 10px;
+        border: 2px solid #969696;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        transition: transform 0.3s;
+    }
+    
+    .contentZone .botton:hover{
+        background-color: #d7d7d7;
+        transform: translateY(-2px);
+    }
+    
+    .contentZone #result{
+        font-size: 25px;
+    }
+}
