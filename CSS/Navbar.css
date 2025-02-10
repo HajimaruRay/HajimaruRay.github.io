@@ -59,6 +59,10 @@
     transform: translateY(-3px); /* Move the button 5px up */
 }
 
+.Navbar .logout{
+    display: none;
+}
+
 @media (max-width: 768px) {
     .Navbar {
         flex-direction: column;
@@ -89,6 +93,7 @@
     }
 
     .Navbar .logout{
+        display: block;
         cursor: pointer;
         transition: transform 0.3s;
     }
