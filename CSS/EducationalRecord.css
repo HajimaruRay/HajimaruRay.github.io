@@ -59,8 +59,13 @@ h2 {
     }
 
     .ContentZone #Photo {
-        width: 200px;
-        height: 200px;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        width: 150px;
+        height: 150px;
+        border-radius: 8%;
+        border: 1=2px solid black;
     }
 
     table {
