@@ -14,9 +14,9 @@
 </head>
 <body>
 
-    <script src="/Json/FuelCalculater.js"></script>
-    <script src="/Json/Password.js"></script>
-    <script src="/Json/DropDown.js"></script>
+    <script src="/Json/FuelCalculater.js" async></script>
+    <script src="/Json/Password.js" async></script>
+    <script src="/Json/DropDown.js" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
 
     <!--Navbar-->
@@ -30,6 +30,7 @@
         
         <ul>
             <li class="link"><a href="/index.html">Home</a></li>
+            <li class="link"><a href="/HTML/Portfilo.html">Portfilo</a></li>
             <li class="link"><a href="/HTML/FuelCalculater.html">FuelCalculater</a> </li>
             <li class="link"><a style=" border-radius: 4px; padding: 4px 12px; background-color: white; color: black;" onclick="Logout()">Logout</a> </li>
         </ul>
@@ -37,12 +38,22 @@
     
     <!--Content Zone-->
     <div class="contentZone" >
-        <a>ราคาน้ำมัน :</a>
+        <a id="fuelPriceText">ราคาน้ำมัน :</a>
         <input class = "text-field" id="fuelPrice" type="text" placeholder="ราคาน้ำมันปัจจุบัน" required><br>
-        <a>ราคาที่ต้องการเติม :</a>
-        <input class = "text-field" id="amount" type="text" placeholder="จำนวนที่ต้องการเติม" required><br>
+
+        <a id="priceAmountText">ราคาที่ต้องการเติม :</a>
+        <input class = "text-field" id="priceAmount" type="text" placeholder="ราคาที่ต้องการเติม">
+        <a id="literAmountText">จำนวนลิตรที่ต้องการเติม :</a>
+        <input class = "text-field" id="literAmount" type="text" placeholder="จำนวนลิตรที่ต้องการเติม">
+
+        <select class="amountSelector" onclick="selectAmount()">
+            <option value="priceAmount">ราคาที่ต้องการเติม</option>
+            <option value="literAmount">จำนวนลิตรที่ต้องการเติม</option>
+        </select> <br>
+
         <a>อัตราสิ้นเปลืองน้ำมัน :</a>
-        <input class = "text-field" id="kmPerliter" type="text">
+        <input class = "text-field" id="kmPerliter" type="text" placeholder="อัตราสิ้นเปลืองน้ำมัน">
+
         <select id="selector" >
             <option value="Km/L">Km/L</option>
             <option value="L/100Km">L/100Km</option>

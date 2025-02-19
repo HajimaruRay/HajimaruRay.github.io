@@ -2,10 +2,11 @@ let calculationData = {};
 
 function fuelcal(){
     var fuelPrice = document.getElementById("fuelPrice").value;
-    var amount = document.getElementById("amount").value;
+    var priceAmount = document.getElementById("priceAmount").value;
+    var literAmount = document.getElementById("literAmount").value;
     var kmPerliter = "";
     fuelPrice = parseFloat(fuelPrice, 10);
-    amount = parseFloat(amount, 10);
+    priceAmount = parseFloat(priceAmount, 10);
 
     if (document.getElementById("selector").value === 'Km/L') {
         kmPerliter = parseFloat(document.getElementById("kmPerliter").value);
@@ -17,53 +18,57 @@ function fuelcal(){
 
 
 
-    if((!isNaN(fuelPrice) && !isNaN(amount)) && (kmPerliter == "" || isNaN(kmPerliter))){
+    if((!isNaN(fuelPrice) && !isNaN(priceAmount)) && (kmPerliter == "" || isNaN(kmPerliter))){
         kmPerliter = 0;
-        var calculateLiterAmount = amount/fuelPrice;
-        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + amount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterAmount.toFixed(2) + " ลิตร";
-    }
-    else if((!isNaN(fuelPrice) && !isNaN(amount))){
+        var calculateLiterpriceAmount = priceAmount/fuelPrice;
+        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + priceAmount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterpriceAmount.toFixed(3) + " ลิตร";
+    } else if((!isNaN(fuelPrice) && !isNaN(priceAmount))){
         kmPerliter = parseFloat(kmPerliter, 10);
-        var calculateLiterAmount = amount/fuelPrice;
-        var distance = calculateLiterAmount*kmPerliter;
-        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + amount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterAmount.toFixed(2) + " ลิตร\nจะได้ระยะทางทั้งหมด " + distance.toFixed(2) + " กิโลเมตร";
-    }
-    else{
+        var calculateLiterpriceAmount = priceAmount/fuelPrice;
+        var distance = calculateLiterpriceAmount*kmPerliter;
+        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + priceAmount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterpriceAmount.toFixed(3) + " ลิตร\nจะได้ระยะทางทั้งหมด " + distance.toFixed(3) + " กิโลเมตร";
+    } else if((!isNaN(fuelPrice) && !isNaN(literAmount))){
+        kmPerliter = 0;
+        var calculationPriceNeeded = literAmount*fuelPrice;
+        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nจำนวนลิตรที่ต้องการเติม " + literAmount + " ลิตร\nจะต้องเติมเป็นจำนวนเงิน " + calculationPriceNeeded.toFixed(3) + " บาท";
+    } else{
         document.getElementById("result").innerText = "Invalid input";
     }
     console.log(typeof("fuelPrice = " + fuelPrice));
-    console.log(typeof("amount = " + amount));
+    console.log(typeof("priceAmount = " + priceAmount));
     console.log(typeof("kmPerliter = " + kmPerliter));
 
     calculationData = {
         fuelPrice: fuelPrice,
-        amount: amount,
+        priceAmount: priceAmount,
+        literAmount: literAmount,
         kmPerliter: kmPerliter,
-        calculateLiterAmount: calculateLiterAmount,
-        distance: kmPerliter > 0 ? calculateLiterAmount * kmPerliter : null
+        calculateLiterpriceAmount: calculateLiterpriceAmount,
+        distance: kmPerliter > 0 ? calculateLiterpriceAmount * kmPerliter : null
     };
 }
 
 function clearInputs() {
     document.getElementById("fuelPrice").value = '';
-    document.getElementById("amount").value = '';
+    document.getElementById("priceAmount").value = '';
+    document.getElementById("literAmount").value = '';
     document.getElementById("kmPerliter").value = '';
     document.getElementById("result").innerText = "";
 }
 
 function downloadExcel() {
-    if(isNaN(calculationData.fuelPrice) && isNaN(calculationData.amount)){
+    if(isNaN(calculationData.fuelPrice) && isNaN(calculationData.priceAmount)){
         document.getElementById("result").innerText="Please insert data first."
     }else{
         var data = [
-            ['Fuel Price', 'Amount', 'KM per Liter', 'Total Liters', 'Total Distance'],
+            ['Fuel Price', 'priceAmount', 'literAmount', 'KM per Liter', 'Total Liters', 'Total Distance'],
             [calculationData.fuelPrice,
-                calculationData.amount,
+                calculationData.priceAmount,
+                calculationData.literAmount,
                 calculationData.kmPerliter || 'N/A',
-                calculationData.calculateLiterAmount.toFixed(2),
+                calculationData.calculateLiterpriceAmount.toFixed(2),
                 calculationData.distance ? calculationData.distance.toFixed(2) : 'N/A']
         ];
-    
         // สร้าง worksheet จากข้อมูล
         var ws = XLSX.utils.aoa_to_sheet(data);
     
@@ -76,7 +81,22 @@ function downloadExcel() {
     }
 }
 
-window.onload = function() {
+function selectAmount() {
+    if (document.getElementsByClassName("amountSelector")[0].value === 'priceAmount') {
+        document.getElementById("priceAmount").style.display = 'inline-block';
+        document.getElementById("priceAmountText").style.display = 'inline-block';
+        document.getElementById("literAmount").style.display = 'none';
+        document.getElementById("literAmountText").style.display = 'none';
+    } else {
+        document.getElementById("priceAmount").style.display = 'none';
+        document.getElementById("priceAmountText").style.display = 'none';
+        document.getElementById("literAmount").style.display = 'inline-block';
+        document.getElementById("literAmountText").style.display = 'inline-block';
+    }
+}
+
+window.addEventListener("load", function() {
+
     try {
         if (sessionStorage.getItem('isLogin') === 'false' || sessionStorage.getItem('isLogin') === null) {
             console.log("Not logged in. Redirecting to index.html...");
@@ -85,8 +105,12 @@ window.onload = function() {
             console.log("User is logged in.");
         }
     } catch (error) {
-
         console.error("Error accessing sessionStorage. Redirecting to index.html.");
         window.location.href = "/index.html";
+    } finally{
+        document.getElementById("priceAmount").style.display = 'inline-block';
+        document.getElementById("priceAmountText").style.display = 'inline-block';
+        document.getElementById("literAmount").style.display = 'none';
+        document.getElementById("literAmountText").style.display = 'none';
     }
-};
+});

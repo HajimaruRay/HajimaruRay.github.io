@@ -49,7 +49,7 @@ function Logout(){
     window.location.href = "/index.html"
 }
 
-window.onload = function() {
+window.addEventListener("load", function() {
     if (sessionStorage.getItem('isLogin') === 'true') {
         const currentPath = window.location.pathname;
         console.log(currentPath);
@@ -57,4 +57,4 @@ window.onload = function() {
             window.location.href = "FuelCalculater.html";
         }
     }
-};
+});

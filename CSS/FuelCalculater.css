@@ -16,6 +16,10 @@
     border: 2px solid #969696;
 }
 
+.contentZone .amountSelector{
+    width: 3%;
+}
+
 .contentZone .botton{
     width: 100px;
     height: 35px;

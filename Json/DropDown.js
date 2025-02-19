@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
     var currentUrl = window.location.pathname; // Get the current page URL
     var select = document.querySelector('.selector'); // Select the dropdown
     console.log(currentUrl);
@@ -13,4 +13,4 @@ window.onload = function() {
     } else if (currentUrl.includes("/HTML/FuelCalculater.html")){
         select.value = "/HTML/FuelCalculater.html";
     }
-};
+});

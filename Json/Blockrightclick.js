@@ -15,7 +15,7 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
-window.onload = function() {
+window.addEventListener("load", function() {
     try {
         if (sessionStorage.getItem('isLogin') === 'true') {
             console.log("Already logged in");
@@ -26,4 +26,4 @@ window.onload = function() {
         console.log("Error accessing sessionStorage. Setting isLogin to 'false'.");
         sessionStorage.setItem('isLogin', 'false');
     }
-};
+});
