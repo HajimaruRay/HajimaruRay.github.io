@@ -16,27 +16,26 @@ function fuelcal(){
 
     console.log(kmPerliter, document.getElementById("selector").value);
 
-
-
-    if((!isNaN(fuelPrice) && !isNaN(priceAmount)) && (kmPerliter == "" || isNaN(kmPerliter))){
+    if ((!isNaN(fuelPrice) && !isNaN(priceAmount) && !isNaN(kmPerliter))){ // Have FuelPrice, PriceAmount, ConsumptionRate 
+        kmPerliter = parseFloat(kmPerliter, 10);
+        var calculateLiterpriceAmount = priceAmount/fuelPrice;
+        var calculationDistance = calculateLiterpriceAmount*kmPerliter;
+        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + priceAmount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterpriceAmount.toFixed(3) + " ลิตร\nจะได้ระยะทางทั้งหมด " + calculationDistance.toFixed(3) + " กิโลเมตร";
+    } else if (!isNaN(fuelPrice) && !isNaN(priceAmount)){ // Have FuelPrice, PriceAmount
         kmPerliter = 0;
         var calculateLiterpriceAmount = priceAmount/fuelPrice;
         document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + priceAmount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterpriceAmount.toFixed(3) + " ลิตร";
-    } else if((!isNaN(fuelPrice) && !isNaN(priceAmount))){
-        kmPerliter = parseFloat(kmPerliter, 10);
-        var calculateLiterpriceAmount = priceAmount/fuelPrice;
-        var distance = calculateLiterpriceAmount*kmPerliter;
-        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nราคาที่ต้องการเติม " + priceAmount + " บาท\nจะเติมได้ทั้งหมด " + calculateLiterpriceAmount.toFixed(3) + " ลิตร\nจะได้ระยะทางทั้งหมด " + distance.toFixed(3) + " กิโลเมตร";
-    } else if((!isNaN(fuelPrice) && !isNaN(literAmount))){
+    } else if (!isNaN(fuelPrice) && !isNaN(literAmount) && !isNaN(kmPerliter)){ // Have FuelPrice, liter Want to fill, ConsumptionRate
+        var calculationPriceNeeded = literAmount*fuelPrice;
+        document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nจำนวนลิตรที่ต้องการเติม " + literAmount + " ลิตร\nจะต้องเติมเป็นจำนวนเงิน " + calculationPriceNeeded.toFixed(3) + " บาท\nจะได้ระยะทางทั้งหมด " + calculationDistance.toFixed(3) + " กิโลเมตร";
+    } else if (!isNaN(fuelPrice) && !isNaN(literAmount)){ // Have FuelPrice, liter Want to fill
         kmPerliter = 0;
         var calculationPriceNeeded = literAmount*fuelPrice;
+        var calculationDistance = calculationPriceNeeded*kmPerliter;
         document.getElementById("result").innerText = "ราคาน้ำมัน " + fuelPrice + " บาท/ลิตร\nจำนวนลิตรที่ต้องการเติม " + literAmount + " ลิตร\nจะต้องเติมเป็นจำนวนเงิน " + calculationPriceNeeded.toFixed(3) + " บาท";
-    } else{
+    } else {
         document.getElementById("result").innerText = "Invalid input";
     }
-    console.log(typeof("fuelPrice = " + fuelPrice));
-    console.log(typeof("priceAmount = " + priceAmount));
-    console.log(typeof("kmPerliter = " + kmPerliter));
 
     calculationData = {
         fuelPrice: fuelPrice,
@@ -82,13 +81,18 @@ function downloadExcel() {
 }
 
 function selectAmount() {
+
+    document.getElementById("result").innerText = "";
+
     if (document.getElementsByClassName("amountSelector")[0].value === 'priceAmount') {
         document.getElementById("priceAmount").style.display = 'inline-block';
         document.getElementById("priceAmountText").style.display = 'inline-block';
         document.getElementById("literAmount").style.display = 'none';
+        document.getElementById("literAmount").value = '';
         document.getElementById("literAmountText").style.display = 'none';
     } else {
         document.getElementById("priceAmount").style.display = 'none';
+        document.getElementById("priceAmount").value = '';
         document.getElementById("priceAmountText").style.display = 'none';
         document.getElementById("literAmount").style.display = 'inline-block';
         document.getElementById("literAmountText").style.display = 'inline-block';
