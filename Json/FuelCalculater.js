@@ -97,6 +97,12 @@ function selectAmount() {
         document.getElementById("literAmount").style.display = 'inline-block';
         document.getElementById("literAmountText").style.display = 'inline-block';
     }
+
+    if (document.getElementById("selector")[0].value === 'Km/L'){
+        document.getElementById("kmPerliter").value = '';
+    } else{
+        document.getElementById("kmPerliter").value = '';
+    }
 }
 
 window.addEventListener("load", function() {
