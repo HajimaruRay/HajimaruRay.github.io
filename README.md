@@ -44,4 +44,4 @@ https://hajimaruray.github.io/
 หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่
 
 - Email: chonlatreeketkorwoingwork@gmail.com
-- GitHub: https://github.com/HajimaruRay/ProcessThreadProject
+- GitHub: https://github.com/HajimaruRay
