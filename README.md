@@ -39,6 +39,14 @@ https://hajimaruray.github.io/
 ```
 หรือ [คลิกที่นี่](https://hajimaruray.github.io/)
 
+## สิ่งที่่ต้องเเก้ไข
+
+- ไม่มีระบบความปลอดภัย ข้อมูลทุกอย่างเป็น Pain Text
+
+## เเนวทางการแก้ไข
+
+- เข้ารหัสข้อมูลที่ต้องเก็บ
+
 ## ติดต่อ
 
 หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่
@@ -47,7 +55,4 @@ https://hajimaruray.github.io/
 - GitHub: https://github.com/HajimaruRay/ProcessThreadProject
 
 ---
-
-ขอบคุณที่สนใจโปรเจกต์นี้ครับ!
-
 
