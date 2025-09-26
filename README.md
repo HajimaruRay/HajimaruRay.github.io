@@ -45,6 +45,3 @@ https://hajimaruray.github.io/
 
 - Email: chonlatreeketkorwoingwork@gmail.com
 - GitHub: https://github.com/HajimaruRay/ProcessThreadProject
-
----
-
