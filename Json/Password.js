@@ -1,22 +1,34 @@
-var correctUserName = ["HajimaruRay"];
-var correctPassword = ["Hajimaruray6872"];
+// username "HajimaruRay"
+var correctUserName = ["7a637785e876af5249b450d6f696ff0542037bc1727f8da90a056ecc02667ccc"];
+// password "Hajimaruray6872"
+var correctPassword = ["145bc19ad1f3ca7453a5c830421160fa337d5f03ee5efb5f9b207a84a70f5084"];
 
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         passwordCheck();
     }
 });
-function passwordCheck(){
-    let password = document.getElementById("password-field").value;
-    let username = document.getElementById("username-field").value;
-    let isCorrect = NaN;
 
-    for(let i = 0;i < correctUserName.length;i++){
-        if (username == correctUserName[i] && password == correctPassword[i]){
+async function hashString(str) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(str);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function passwordCheck(){
+    let username = document.getElementById("username-field").value;
+    let password = document.getElementById("password-field").value;
+    let isCorrect = false;
+
+    const usernameHash = await hashString(username);
+    const passwordHash = await hashString(password);
+
+    for(let i = 0; i < correctUserName.length; i++){
+        if (usernameHash === correctUserName[i] && passwordHash === correctPassword[i]){
             isCorrect = true;
-        }
-        else{
-            isCorrect = false;
+            break;
         }
     }
 
@@ -24,8 +36,8 @@ function passwordCheck(){
         sessionStorage.setItem('isLogin','true');
         window.location.href = "FuelCalculater.html";
     } else{
-        password = "";
-        document.getElementById("alartMessage").innerText= "Password must be wrong."
+        document.getElementById("alartMessage").innerText= "Password must be wrong.";
+        document.getElementById("password-field").value = "";
     }
 }
 
