@@ -5,8 +5,8 @@ var correctUsers = [
         passwordHash: "145bc19ad1f3ca7453a5c830421160fa337d5f03ee5efb5f9b207a84a70f5084"  // "Hajimaruray6872"
     },
     {
-        usernameHash: "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", // ตัวอย่าง username2 hash
-        passwordHash: "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  // ตัวอย่าง password2 hash
+        usernameHash: "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", // "admin"
+        passwordHash: "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  // "admin"
     }
 ];
 
