@@ -1,0 +1,22 @@
+{
+  "name": "hajimaruray.github.io",
+  "version": "1.0.0",
+  "description": "โปรเจคนี้พัฒนาขึ้นมาเพื่อใช้เป็น Web Application นำเสนอเเละเก็บรวบรวมผลงานที่เคยทำมาตลอดจนถึงปัจจุบัน",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HajimaruRay/HajimaruRay.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HajimaruRay/HajimaruRay.github.io/issues"
+  },
+  "homepage": "https://github.com/HajimaruRay/HajimaruRay.github.io#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3"
+  }
+}
