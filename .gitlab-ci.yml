@@ -14,7 +14,7 @@ build-job:
 lint-test-job:
   stage: test
   before_script:
-    - npm ci
+    - npm install
     - npx playwright install --with-deps
   script:
     - npx playwright test
