@@ -81,7 +81,12 @@ th, td{
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    a {
+        font-size: 14px;
+    }
+
     th, td{
         padding: 5px;
     }
