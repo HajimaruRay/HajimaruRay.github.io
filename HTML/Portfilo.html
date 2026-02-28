@@ -36,7 +36,569 @@
     </div>
 
     <!--Content Zone-->
-    
+    <section class="cover">
+    <div>
+        <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo">
+        <h1>Chonlatree Ketkorwoing</h1>
+        <p>Software Test Engineer | Manual QA | Automation</p>
+        <a href="mailto:chonlareeketkorwoingwork@gmail.com" style="color: rgb(0, 0, 0);">[Email]</a>
+        <a> | </a>
+        <a href="https://github.com/HajimaruRay" style="color: rgb(0, 0, 0);">[Github]</a>
+    </div>
+    </section>
+
+    <section id="summary" class="section">
+        <h2>Professional Summary</h2>
+        <div class="box">
+            <a>&emsp;&emsp;Computer Science student with experience as a Manual Software Tester, responsible for designing and creating test cases, executing test scenarios, recording test results, and preparing detailed bug reports. Experienced in working within an Agile environment and collaborating closely with developers and team members to ensure software quality and support issue resolution.</a> <br>
+            <a>&emsp;&emsp;Hands-on experience in testing internal web-based systems, including an Employee Medical Benefits System and an Employee Performance Evaluation System. Performed manual UI testing for web applications on both desktop environments and responsive layouts to ensure correct functionality and consistent user experience across different screen sizes.</a> <br>
+            <a>&emsp;&emsp;Additionally, gained basic experience in API testing using Postman to verify request and response behavior.</a> <br>
+            <a>&emsp;&emsp;Currently expanding skills in test automation, including designing Smoke Test, Regression Test, and Service-level test scenarios, as well as developing automated test scripts using Playwright. Possess fundamental knowledge of software testing concepts and practices.</a> <br>
+        </div>
+    </section>
+
+    <section id="internship" class="section">
+        <h2>Internship Experience</h2>
+        <div class="box">
+            <h3>Software Tester (Intern) – Move Plus Co., Ltd. (Oct 2025 – Present) </h3>
+            <pre>
+            • Designed and executed manual test cases based on system requirements
+            • Performed functional and regression testing on web applications
+            • Reported bugs and tracked issues using testing and documentation tools
+            • Collaborated with developers to verify and re-test bug fixes re-test bug fixes
+            • Prepared test reports and test documentation
+            </pre>
+        </div>
+    </section>
+
+    <section id="manual" class="section">
+        <h2>Manual Testing Experience</h2>
+        <div class="box">
+            <h3>Manual Testing Experience</h3>
+            <pre>
+                • Performed manual testing for internal Web Applications, including:
+                    • Employee Medical Benefits Management System
+                    • Employee Performance Evaluation System
+            </pre>
+            <h3>Testing Activities</h3>
+            <pre>
+                • Designed and created detailed Test Cases based on requirements and user workflows
+                • Executed test cases and recorded test results systematically
+                • Conducted UI Testing by validating the application against design prototypes
+                • Performed Responsive Testing across different screen sizes and devices
+                • Tracked test execution progress and maintained Test Result Reports
+            </pre>
+            <h3>Defect Management</h3>
+            <pre>
+                • Identified, documented, and reported defects using a structured Bug Report
+                • Assigned appropriate Severity and Priority levels based on impact
+                • Provided clear reproduction steps, expected results, and actual results
+            </pre>
+            <h3>Process & Collaboration</h3>
+            <pre>
+                • Worked in an Agile environment (Scrum)
+                • Collaborated with Developers and team members to clarify issues and verify fixes
+            </pre>
+        </div>
+    </section>
+
+    <section id="Automate" class="section">
+        <h2>Automation Testing Experience</h2>
+        <div class="box">
+            <h3>Automation Testing Experience</h3>
+            <pre>
+                • Developed automated test scripts for End-to-End (E2E) Regression Testing (personal practice project – work in progress)
+                • Implemented Smoke Test automation for the SauceDemo web application
+                • Designed test scenarios based on functional workflows and critical user paths
+                • Executed automated tests to validate core system functionality
+            </pre>
+            <h3>Tools & Technologies</h3>
+            <pre>
+                • Playwright (TypeScript)
+                • Git for version control
+                • GitLab for repository management
+            </pre>
+            <h3>CI/CD</h3>
+            <pre>
+                • Configured and tested basic GitLab CI/CD pipeline
+                • Executed automated test scripts through CI to support continuous testing
+            </pre>
+            <h3>Code Repository</h3>
+            <pre>
+                SaucedemoAutomateTest Github: <a href="https://github.com/HajimaruRay/SaucedemoAutomateTest.git" target="_blank">Link!</a>
+                Web Profile Github: <a href="https://github.com/HajimaruRay/HajimaruRay.github.io.git" target="_blank">Link!</a>
+            </pre>
+        </div>
+    </section>
+
+    <section id="TestCase design Example" class="section">
+        <h2>TestCase design Example</h2>
+        <div class="box">
+            <h3>Test case for Manual UI Testing</h3>
+            <div class="table-container">
+                <table class="test-table">
+
+                    <!-- Section Title -->
+                    <tr class="section-row">
+                        <td colspan="6">Test case for Manual UI Testing Example</td>
+                    </tr>
+
+                    <!-- Header -->
+                    <tr>
+                        <th class="col-id">ID</th>
+                        <th class="col-title">Title</th>
+                        <th class="col-pre">Pre-conditions</th>
+                        <th class="col-desc">Brief description</th>
+                        <th class="col-steps">Test steps with test data</th>
+                        <th class="col-expected">Expected test result</th>
+                    </tr>
+
+                    <!-- Sample Row -->
+                    <tr>
+                        <td>UI001</td>
+
+                        <td>
+                            [Success] Verify that the "Role Management" page is displayed correctly.
+                        </td>
+
+                        <td>
+                            1. Persona: Admin
+                        </td>
+
+                        <td>
+                            Ensure that when the user selects the "Role Management" page, the system displays the information correctly.
+                        </td>
+
+                        <td>
+                            1. Enter valid user credentials <br>
+                            2. Click menu "Role Management"
+                        </td>
+
+                        <td>
+                            1. N/A <br>
+                            2. Ensure that when the user selects the "Role Management" page, the system displays the information correctly.<br>
+                            Header Section<br>
+                            - Sub Title : การจัดการสิทธิ<br>
+                            - Page Title : Role Management<br>
+                            Search Section<br>
+                            - Search Field is displayed /  Placeholder : ค้นหาข้อมูลสิทธิของพนักงาน เช่น ชื่อพนักงาน...<br>
+                                - Search icon is displayed inside the field<br>
+                            - User can input text for searching<br>
+                            - System filters data based on keyword<br>
+                            Action Button Section<br>
+                            - “กำหนดสิทธิผู้ใช้ใหม่” button is visible and enabled<br>
+                                - When clicked, system navigates to New employee assign role page<br>
+                            - More Options Button is visible and enabled<br>
+                            Table Section<br>
+                            - Table is displayed correctly<br>
+                            - The Admin role is always displayed at the top of the sorted list.<br>
+                            - Column Headers :<br>
+                                - ชื่อพนักงาน<br>
+                                - ชื่อสิทธิ<br>
+                                - เครื่องมือ (edit/delete)<br>
+                            - Data is displayed according to system records<br>
+                            - Sort icon is displayed in each column header.<br>
+                            Tool Column <br>
+                                - Edit icon is visible When clicked, navigates to Edit Role page<br>
+                                - Delete icon is visible When clicked modal displayed<br>
+                            Pagination Section<br>
+                            - Page size dropdown is displayed (Default: 10)<br>
+                            - Text : แสดงผล 1 - 10 จาก xx รายการ is displayed<br>
+                            - Page number buttons are visible<br>
+                            - Previous / Next buttons are enabled/disabled based on page<br>
+                            - User can navigate between pages<br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Test case for Smoke Test</h3>
+            <div class="table-container">
+                <table class="test-table">
+
+                    <!-- Section Title -->
+                    <tr class="section-row">
+                        <td colspan="6">Test case for Manual UI Testing Example</td>
+                    </tr>
+
+                    <!-- Header -->
+                    <tr>
+                        <th class="col-id">ID</th>
+                        <th class="col-title">Title</th>
+                        <th class="col-pre">Pre-conditions</th>
+                        <th class="col-desc">Brief description</th>
+                        <th class="col-steps">Test steps with test data</th>
+                        <th class="col-expected">Expected test result</th>
+                    </tr>
+
+                    <!-- Sample Row -->
+                    <tr>
+                        <tr>
+                            <td>SM001</td>
+                            <td>[Success]Verify that the system displays the Login page correctly.</td>
+                            <td>1. URL : https://www.saucedemo.com</td>
+                            <td>Ensure that the system displays the Login page correctly.</td>
+                            <td>1. Open the browser and enter the system URL to navigate to the Login page.</td>
+                            <td>
+                                1. Ensure that the system displays the Login page correctly.   <br>
+                                - Page URL contain "saucedemo.com" <br>
+                                - Username and Password field are displayed <br>  
+                                - Login button is displayed
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM002</td>
+                            <td>[Success]Verify that the user can login successfully and navigate to inventory page.</td>
+                            <td>
+                                1. URL : https://www.saucedemo.com  <br>
+                                2. UserID : standard_user / Password : secret_sauce  <br>
+                            </td>
+                            <td>Ensure that the system display correctly after user login in correct username and password</td>
+                            <td>
+                                1. Open the browser and enter the system URL to navigate to the Login page.  <br>
+                                2. Enter vaild username and password.  <br>
+                                3. Click on the "Login" Button. <br> 
+                            </td> 
+                            <td>
+                                1. N/A<br>
+                                2. N/A<br>
+                                3. Ensure that the system display correctly after user login in correct username and password <br>
+                                - User login successfully <br>
+                                - Page URL contain "/inventory.html" <br>
+                                - User is redirected to Inventory page <br>
+                                - Inventory page is displayed
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM003</td>
+                            <td>[Success]Verify that the user can add an item to the cart.</td>
+                            <td>User already logged in</td>
+                            <td>Ensure that the user can add an item to the cart after clicked the button.</td>
+                            <td>1. Click the "Add to cart" button.</td>
+                            <td>
+                                1. Ensure that the user can add an item to the cart .<br>
+                                - Item is added to the cart successfully<br>
+                                - The cart icon badge displays the count of "item" in the cart.<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM004</td>
+                            <td>[Success]Verify that the system navigate to the "Your cart" page.</td>
+                            <td>
+                                User already logged in  <br>
+                                At least one item exists in the cart  <br>
+                            </td>
+                            <td>Ensure that the system navigate to the "Your cart" page.</td>
+                            <td>1. Click the "cart" Icon.</td>
+                            <td>
+                                1. Ensure that the system navigate to the "Your cart" page. <br>
+                                - User is navigated to Cart page  <br>
+                                - Page URL contains "/cart.html"  <br>
+                                - Item is displayed in the cart   <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM005</td>
+                            <td>[Success]Verify that the user can checkout the item.</td>
+                            <td>
+                                User already in cart page  <br>
+                                At least one item is added to the cart  <br>
+                            </td>
+                            <td>Ensure that the user can checkout the item.</td>
+                            <td>1. Click the "Checkout" button.</td>
+                            <td>
+                                1. Ensure that the user can checkout the item.  <br>
+                                - User is navigated to Checkout: Your Information page  <br>
+                                - Page URL contains "/checkout-step-one.html"  <br>
+                                - First Name, Last Name, and Postal Code fields are displayed  <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM006</td>
+                            <td>[Success]Verify that the user can continue checkout after entering all required information.</td>
+                            <td>
+                                1. User already in Checkout: Information Page  <br>
+                                2. first-name : "Leon",  <br>
+                                last-name :"Kenedy",  <br>
+                                postal-code :"12345"  <br>
+                            </td>
+                            <td>Ensure that the user can continue checkout after input all the information.</td>
+                            <td>1. Fill all the input field with valid input.\n2. Click the "Continue" button.</td>
+                            <td>
+                                1. N/A  <br>
+                                2. Ensure that the user can continue checkout after input all the information.  <br>
+                                - User is navigated to Checkout: Overview page  <br>
+                                - Page URL contains "/checkout-step-two.html"  <br>
+                                - Checkout summary is displayed <br>
+                                - Finish button displayed
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SM007</td>
+                            <td>[Success]Verify that the user can successfully checkout item after clicked finish</td>
+                            <td>User already in Checkout: Overview page</td>
+                            <td>Ensure that the user can successfully checkout item after clicked finish</td>
+                            <td>1. Click the "Finish" button.</td>
+                            <td>
+                                1. Ensure that the user can successfully checkout item after clicked finish  <br>
+                                - User is navigated to Checkout:Complete! page  <br>
+                                - Page URL contains "/checkout-complete.html"  <br>
+                                - Order confirmation message is displayed  <br>
+                                - Back Home button displayed  <br>
+                            </td>
+                        </tr>
+                    </tr>
+                </table>
+            </div>
+            <h3>Test case for Regression Test</h3>
+                        <div class="table-container">
+                <table class="test-table">
+
+                    <!-- Section Title -->
+                    <tr class="section-row">
+                        <td colspan="6">Test case for Manual UI Testing Example</td>
+                    </tr>
+
+                    <!-- Header -->
+                    <tr>
+                        <th class="col-id">ID</th>
+                        <th class="col-title">Title</th>
+                        <th class="col-pre">Pre-conditions</th>
+                        <th class="col-desc">Brief description</th>
+                        <th class="col-steps">Test steps with test data</th>
+                        <th class="col-expected">Expected test result</th>
+                    </tr>
+
+                    <!-- Sample Row -->
+                                        <tr>
+                    <tr>
+                        <td>LR001</td>
+                        <td>[Success]Verify that the "Inventory" page is display correctly</td>
+                        <td>1. URL : https://www.saucedemo.com<br>2. UserID : standard_user / Password : secret_sauce</td>
+                        <td>Ensure that the "Inventory" page is display correctly</td>
+                        <td>1. Open the browser and enter the system URL to navigate to the Login page.<br>2. Enter vaild username and
+                            password.<br>3. Click the "Login" Button.</td>
+                        <td>1. N/A<br>2. N/A<br>3. Ensure that the "Inventory" page is display correctly<br> - User is navigated to the
+                            Inventory page.<br> - Page URL contains "/inventory.html"<br> - Page title "Products" is displayed<br> - Product
+                            list is displayed<br> - Each product shows:<br> - Product name<br> - Product discription<br> - Product image<br>
+                            - Product price<br> - "Add to cart" button<br> - Shopping cart icon is displayed<br> - Sort dropdown is
+                            displayed<br> - Menu button (hamburger) is displayed</td>
+                    </tr>
+                    <tr>
+                        <td>LR002</td>
+                        <td>[Success]Verify that the hamburger menu is functional</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the hamburger menu is functional</td>
+                        <td>1. Click the Hamburger menu on the top left side.</td>
+                        <td>1. Ensure that the hamburger menu is functional<br> - The hamburger menu is displayed after clicking the
+                            hamburger icon<br> - Munu option are displayed in the drower :<br> - All Item<br> - About<br> - Logout<br> -
+                            Reset App State<br> - Menu drower can close by clicking (X) icon on the top right of the drower</td>
+                    </tr>
+                    <tr>
+                        <td>LR003</td>
+                        <td>[Success]Verify that the product detail is displayed correctly</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the product detail is displayed correctly after user clicking on prouct name.</td>
+                        <td>1. Click the product name.</td>
+                        <td>1. Ensure that the product detail is displayed correctly after user clicking on product name.<br> - User
+                            navigated to the product detail page<br> - The URL contain "/inventory-item.html?id={item_id}"<br> - Each
+                            product detail shows:<br> - Product name<br> - Product discription<br> - Product image<br> - Product price<br> -
+                            "Add to cart" button</td>
+                    </tr>
+                    <tr>
+                        <td>LR004</td>
+                        <td>[Success]Verify that the user can add an item to the cart.</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the user can add an item to the cart after clicked the button.</td>
+                        <td>1. Click the "Add to cart" button.</td>
+                        <td>1. Ensure that the user can add an item to the cart .<br> - Item is added to the cart successfully<br> - The
+                            cart icon badge displays the count of "item" in the cart.<br></td>
+                    </tr>
+                    <tr>
+                        <td>LR005</td>
+                        <td>[Success]Verify that the user can Remove an item to the cart.</td>
+                        <td>User already logged in<br>At least one item exists is selected</td>
+                        <td>Ensure that the user can remove an item to the cart after clicked the button.</td>
+                        <td>1. Click the "Remove" button on the item that selected</td>
+                        <td>1. Ensure that the user can remove an item to the cart after clicked the button.<br> - Item is removed from the
+                            cart successfully<br> - The cart icon badge displays the count of "item" in the cart. (in case still have items
+                            in the cart)<br> - The cart icon badge didn't displayed the count of items in the cart. (in case don't have any
+                            item in the cart)<br></td>
+                    </tr>
+                    <tr>
+                        <td>LR006</td>
+                        <td>[Success]Verify that the system navigate to the "Your cart" page.</td>
+                        <td>User already logged in<br>At least one item exists in the cart<br></td>
+                        <td>Ensure that the system navigate to the "Your cart" page.</td>
+                        <td>1. Click the "cart" Icon.</td>
+                        <td>1. Ensure that the system navigate to the "Your cart" page.<br> - User is navigated to Cart page<br> - Page URL
+                            contains "/cart.html"<br> - Cart page is displayed<br> - Item is displayed in the cart</td>
+                    </tr>
+                    <tr>
+                        <td>LR007</td>
+                        <td>[Success]Verify that the "sort" dropdown is functional and enabled</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the "sort" dropdown is functional and enabled</td>
+                        <td>1. Click the sort dropdown.</td>
+                        <td>1. Ensure that the "sort" dropdown is functional and enable<br> - The sort dropdown is visable and enabled<br> -
+                            sort option ard displayed after clicking the dropdown :<br> - Name (A To Z)<br> - Name (Z To A)<br> - Price (low
+                            to high)<br> - Price (high to low)</td>
+                    </tr>
+                    <tr>
+                        <td>LR008</td>
+                        <td>[Success]Verify that the "Name (A to Z)" sort option sorts products in ascending order.</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the "Name (A to Z)" sort option sorts products in ascending order.</td>
+                        <td>1. Click the sort dropdown.<br>2. Select the "Name (A to Z)" option.</td>
+                        <td>1. N/A<br>2. Ensure that the "Name (A to Z)" sort option sorts products in ascending order.<br> - The products
+                            is sorted in ascending alphabetical order by product name<br> - The first product name is alphabetically less
+                            than or equal to the next product name</td>
+                    </tr>
+                    <tr>
+                        <td>LR009</td>
+                        <td>[Success]Verify that the "Name (Z to A)" sort option sorts products in desending order.</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the "Name (Z to A)" sort option sorts products in desending order.</td>
+                        <td>1. Click the sort dropdown.<br>2. Select the "Name (Z to A)" option.</td>
+                        <td>1. N/A<br>2. Ensure that the "Name (Z to A)" sort option sorts products in desending order.<br> - The products
+                            is sorted in descending alphabetical order by product name<br> - The first product name is alphabetically more
+                            than or equal to the next product name</td>
+                    </tr>
+                    <tr>
+                        <td>LR010</td>
+                        <td>[Success]Verify that the "Price (low to high)" sort option sorts products in increasing price</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the "Price (low to high)" sort option sorts products in increasing price</td>
+                        <td>1. Click the sort dropdown.<br>2. Select the "Price (low to high)" option.</td>
+                        <td>1. Ensure that the "Price (low to high)" sort option sorts products in increasing price .<br> - The products is
+                            sorted in increasing price order by product price<br> - The first product price is less than or equal to the
+                            next product price</td>
+                    </tr>
+                    <tr>
+                        <td>LR011</td>
+                        <td>[Success]Verify that the "Price (high to low)" sort option sorts products in decreasing price</td>
+                        <td>User already logged in</td>
+                        <td>Ensure that the "Price (high to low)" sort option sorts products in decreasing price</td>
+                        <td>1. Click the sort dropdown.<br>2. Select the "Price (high to low)" option.</td>
+                        <td>1. Ensure that the "Price (high to low)" sort option sorts products in decreasing price .<br> - The products is
+                            sorted in decreasing price order by product price<br> - The first product price is more than or equal to the
+                            next product price</td>
+                    </tr>
+                    <tr>
+                        <td>LR011</td>
+                        <td>[Fail]Verify that the user cannot access Inventory page without login</td>
+                        <td>Web URL : https://www.saucedemo.com/inventory.html</td>
+                        <td>Ensure that the user cannot access Inventory page without login</td>
+                        <td>1. Open the browser and enter the system URL to navigate to the Inventory page.</td>
+                        <td>1. Ensure that the user cannot access Inventory page without login<br> - User is redirected to Login page<br> -
+                            Inventory Page isn't displayed</td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="bug" class="section">
+        <h2>Bug Report Example</h2>
+
+        <div class="bug-box">
+            <div class="bug-header">
+                <h3>UI Issue: Role Management Page Display Error</h3>
+            </div>
+            <div><strong>Environment:</strong> XXX</div>
+            <div><strong>URL:</strong> https://example.com</div>
+            <div><strong>Backend Version:</strong> vX.X.X</div>
+            <div><strong>Frontend Version:</strong> vX.X.X</div>
+            <div><strong>Account:</strong> XXX</div>
+            <div><strong>Severity:</strong> High</div>
+            <div><strong>Priority:</strong> Medium</div>
+            <h4>Steps to Reproduce</h4>
+                <ol>
+                    <pre>
+                        1. Enter valid credentials and log in
+                        2. Navigate to menu "Role Management"
+                        3. Observe the page display
+                    </pre>
+                </ol>
+            <h4>Expected Result</h4>
+                <p>Role Management page should load and display correctly.</p>
+                <div class="image-placeholder">Expected Result Image</div>
+            <h4>Actual Result</h4>
+                <p>Page layout is broken and some elements are not displayed properly.</p>
+                <div class="image-placeholder">Actual Result Image</div>
+
+        </div>
+    </section>
+
+    <!-- Testing Knowledge -->
+    <section id="knowledge" class="section">
+        <h2>Testing Knowledge</h2>
+        <div class="box">
+            <h3>Software Testing Fundamentals</h3>
+            <pre>
+                - Understanding of Software Testing Life Cycle (STLC)
+                    - test planning : test planning phase involves defining the testing strategy, scope, resources, and schedule for the testing activities.
+                    - test analysis and design : test analysis and design phase involves analyzing the requirements and designing test cases and test data.
+                    - test case development : test case development phase involves creating detailed test cases based on the test design and requirements.
+                    - test environment setup : test environment setup phase involves preparing the necessary hardware, 
+                        software, and network configurations for testing.
+                    - test execution : test execution phase involves executing the test cases and recording the results.
+                    - test closure : test closure phase involves evaluating the testing process, documenting lessons learned, 
+                        and closing the testing activities.
+                - Knowledge of Software Development Life Cycle (SDLC)
+                    - requirement analysis : requirement analysis phase involves understanding and analyzing the software requirements.
+                    - system design : system design phase involves creating the architecture and design of the software based on requirements.
+                    - implementation : implementation phase involves coding and development of the software.
+                    - testing : testing phase involves executing test cases and reporting defects.
+                    - deployment : deployment phase involves releasing the software to production.
+                    - maintenance : maintenance phase involves ongoing support.
+                - Test Level
+                    - Unit Test : The test that focuses on testing individual components or modules of the software 
+                        to ensure they work correctly in isolation.
+                    - Integration Test : The test that focuses on testing the interactions between different components or modules 
+                        to ensure they work together as expected.
+                    - System Test : The test that focuses on testing the complete and integrated software system 
+                        to ensure it meets the specified requirements.
+                    - User Acceptance Testing (UAT): The test that focuses on validating the software against user needs and requirements 
+                        to ensure it is ready for production use.
+                - Test Types
+                    - Smoke : Test critical functionality to ensure the system is stable for further testing.
+                    - Regression : Test existing functionality to ensure that new changes haven't introduced defects.
+                    - Functional : Test specific features or functions of the software to ensure they work as expected.
+                    - UI : Test the user interface to ensure it meets design specifications and provides a good user experience.
+                    - End-to-End (E2E) : Test complete user workflows to ensure the system works as a whole from start to finish.
+            </pre>
+            <h3>Test Design Techniques</h3>
+            <pre>
+                - Basic understanding of
+                    - Equivalence Partitioning : A test design technique that divides input data into equivalent classes or partitions,
+                        where test cases are designed to cover each partition at least once.
+                    - Boundary Value : A test design technique that focuses on testing the boundaries or edge cases of input data.
+                    - Positive & Negative Testing : Positive testing focuses on verifying that the software behaves as expected with valid input, 
+                        negative testing focuses on verifying that the software handles invalid input gracefully.
+                    - Test Case Prioritization based on risk and business impact : test cases are prioritized based on the potential risk 
+                        and impact of the functionality being tested.
+            </pre>
+            <h3>Defect Management</h3>
+            <pre>
+                - Writing clear and structured Bug Reports
+                - Understanding of defect workflow
+                - Ability to assign appropriate Severity and Priority
+            </pre>
+            <h3>Agile & Process</h3>
+            <pre>
+                - Experience working in Agile (Scrum)
+                - Understanding of Sprint cycle
+            </pre>
+            <h3>Automation Concepts</h3>
+            <pre>
+                - Understanding the purpose of test automation
+                - Knowledge of when to use Automation vs Manual testing
+                - Basic understanding of CI/CD for automated test execution
+            </pre>
+        </div>
+    </section>
     
     <!--Contract Zone-->
     <div class="profile_link">

@@ -1,8 +1,268 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-*{
+
+* {
     font-family: "Oswald", sans-serif;
+    box-sizing: border-box;
 }
 
+/* Base font size */
+body {
+    font-size: 18px; /* เพิ่มขนาดตัวอักษรหลัก */
+    line-height: 1.7;
+}
+
+#Photo
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 8%;
+        border: 1=2px solid black;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-color: black;
+}
+
+/* Cover */
+.cover {
+    height: 50vh;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cover h1 {
+    font-size: 56px; /* ใหญ่ขึ้น */
+    margin-bottom: 15px;
+}
+
+.cover p {
+    font-size: 22px; /* ใหญ่ขึ้น */
+}
+
+/* Sections */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;   /* ลดจาก 80px → 40px (ระยะห่างสั้นลง) */
+}
+
+/* Section Title */
+.section h2 {
+    font-size: 32px;      /* เพิ่มขนาดหัวข้อ */
+    margin-bottom: 15px;
+    border-left: 6px solid #000000;
+    padding-left: 12px;
+}
+
+/* Content Box */
+.box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    min-height: 120px;
+    font-size: 18px;  /* ตัวเนื้อหาใหญ่ขึ้น */
+}
+
+.box .Profile_Text_Base #ProgrammingLanguage
+{
+    padding-top: 1%;
+    padding-left: 4%;
+    font-size: 30px;
+}
+
+.box  .Profile_Text_Base #LanguageLogo
+{
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.box .Profile_Text_Base .CodeLogo
+{
+    padding-left: 4%;
+}
+
+/* GitHub Link Box */
+.link-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+/* Container สำหรับ Scroll */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+}
+
+/* Table */
+.test-table {
+    border-collapse: collapse;
+    width: max-content;        /* สำคัญ: ให้ขยายตามเนื้อหา */
+    min-width: 100%;           /* อย่างน้อยเต็มจอ */
+    table-layout: auto;
+}
+
+/* Header */
+.test-table th {
+    background: #d9d9d9;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cell */
+.test-table th,
+.test-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    vertical-align: top;
+    font-size: 14px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* กำหนดความกว้างขั้นต่ำของแต่ละคอลัมน์ */
+.test-table th:nth-child(1),
+.test-table td:nth-child(1) {
+    min-width: 80px;   /* ID */
+}
+
+.test-table th:nth-child(2),
+.test-table td:nth-child(2) {
+    min-width: 280px;  /* Title */
+}
+
+.test-table th:nth-child(3),
+.test-table td:nth-child(3) {
+    min-width: 160px;  /* Pre-condition */
+}
+
+.test-table th:nth-child(4),
+.test-table td:nth-child(4) {
+    min-width: 280px;  /* Description */
+}
+
+.test-table th:nth-child(5),
+.test-table td:nth-child(5) {
+    min-width: 220px;  /* Steps */
+}
+
+.test-table th:nth-child(6),
+.test-table td:nth-child(6) {
+    min-width: 420px;  /* Expected Result */
+}
+
+/* Section Row */
+.section-row td {
+    background: #eef2f7;
+    font-weight: bold;
+}
+
+/* Bug Report Box */
+.bug-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Header */
+.bug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.bug-header h3 {
+    margin: 0;
+}
+
+/* Badges */
+.bug-badges span {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.severity.high { background: #e74c3c; }
+.priority.medium { background: #f39c12; }
+
+/* Environment Grid */
+.bug-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Section */
+.bug-section {
+    margin-top: 20px;
+}
+
+.bug-section h4 {
+    margin-bottom: 8px;
+    border-left: 4px solid #007bff;
+    padding-left: 8px;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    margin-top: 10px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    
+    body {
+        font-size: 16px;
+    }
+
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .cover p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 30px 15px; /* ลดระยะห่างในมือถือ */
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
 }
