@@ -47,8 +47,3 @@ test('Educational Record Link', async ({ page }) => {
   await page.getByRole('link', { name: 'Educational Record' }).click();
   await expect(page).toHaveTitle(/Educational Record/);
 });
-
-
-
-//npx playwright test tests/test.spec.ts --ui
-//npx playwright test tests/test.spec.ts
