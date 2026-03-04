@@ -5,19 +5,41 @@
     box-sizing: border-box;
 }
 
-/* Base font size */
-body {
-    font-size: 18px; /* เพิ่มขนาดตัวอักษรหลัก */
-    line-height: 1.7;
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    font-size: clamp(14px, 1.2vw, 18px);
 }
 
-#Photo
-    {
-        width: 150px;
-        height: 150px;
-        border-radius: 8%;
-        border: 1=2px solid black;
-    }
+body {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+#Photo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 8%;
+    border: 2px solid black;
+}
+
+/* =========================
+   TABLE BASE
+========================= */
 
 table {
     width: 100%;
@@ -26,102 +48,22 @@ table {
     border-color: black;
 }
 
-/* Cover */
-.cover {
-    height: 50vh;
-    color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.cover h1 {
-    font-size: 56px; /* ใหญ่ขึ้น */
-    margin-bottom: 15px;
-}
-
-.cover p {
-    font-size: 22px; /* ใหญ่ขึ้น */
-}
-
-/* Sections */
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;   /* ลดจาก 80px → 40px (ระยะห่างสั้นลง) */
-}
-
-/* Section Title */
-.section h2 {
-    font-size: 32px;      /* เพิ่มขนาดหัวข้อ */
-    margin-bottom: 15px;
-    border-left: 6px solid #000000;
-    padding-left: 12px;
-}
-
-/* Content Box */
-.box {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    min-height: 120px;
-    font-size: 18px;  /* ตัวเนื้อหาใหญ่ขึ้น */
-}
-
-.box .Profile_Text_Base #ProgrammingLanguage
-{
-    padding-top: 1%;
-    padding-left: 4%;
-    font-size: 30px;
-}
-
-.box  .Profile_Text_Base #LanguageLogo
-{
-    margin-right: 1%;
-    margin-top: 1%;
-    width: 40px;
-}
-
-.box .Profile_Text_Base .CodeLogo
-{
-    padding-left: 4%;
-}
-
-/* GitHub Link Box */
-.link-box a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #222;
-    color: white;
-    font-size: 16px;
-}
-/* Container สำหรับ Scroll */
+/* Scroll container */
 .table-container {
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin-top: 20px;
     border: 1px solid #ddd;
     border-radius: 6px;
     background: #fff;
 }
 
-/* Table */
+/* Test table */
 .test-table {
     border-collapse: collapse;
-    width: max-content;        /* สำคัญ: ให้ขยายตามเนื้อหา */
-    min-width: 100%;           /* อย่างน้อยเต็มจอ */
+    width: 100%;
+    min-width: 900px; /* ป้องกัน layout พัง */
     table-layout: auto;
 }
 
@@ -132,7 +74,7 @@ footer {
     text-align: center;
 }
 
-/* Cell */
+/* Cells */
 .test-table th,
 .test-table td {
     border: 1px solid #999;
@@ -143,44 +85,114 @@ footer {
     word-break: break-word;
 }
 
-/* กำหนดความกว้างขั้นต่ำของแต่ละคอลัมน์ */
+/* Column min width */
 .test-table th:nth-child(1),
-.test-table td:nth-child(1) {
-    min-width: 80px;   /* ID */
-}
+.test-table td:nth-child(1) { min-width: 80px; }
 
 .test-table th:nth-child(2),
-.test-table td:nth-child(2) {
-    min-width: 280px;  /* Title */
-}
+.test-table td:nth-child(2) { min-width: 280px; }
 
 .test-table th:nth-child(3),
-.test-table td:nth-child(3) {
-    min-width: 160px;  /* Pre-condition */
-}
+.test-table td:nth-child(3) { min-width: 160px; }
 
 .test-table th:nth-child(4),
-.test-table td:nth-child(4) {
-    min-width: 280px;  /* Description */
-}
+.test-table td:nth-child(4) { min-width: 280px; }
 
 .test-table th:nth-child(5),
-.test-table td:nth-child(5) {
-    min-width: 220px;  /* Steps */
-}
+.test-table td:nth-child(5) { min-width: 220px; }
 
 .test-table th:nth-child(6),
-.test-table td:nth-child(6) {
-    min-width: 420px;  /* Expected Result */
-}
+.test-table td:nth-child(6) { min-width: 420px; }
 
-/* Section Row */
+/* Section row */
 .section-row td {
     background: #eef2f7;
     font-weight: bold;
 }
 
-/* Bug Report Box */
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    min-height: 40vh;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cover h1 {
+    font-size: clamp(32px, 6vw, 56px);
+    margin-bottom: 15px;
+}
+
+.cover p {
+    font-size: clamp(16px, 3vw, 22px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: clamp(20px, 5vw, 40px) 20px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    border-left: 6px solid #000000;
+    padding-left: 12px;
+}
+
+/* Content box */
+.box {
+    background: #ffffff;
+    padding: clamp(20px, 4vw, 30px);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    min-height: 120px;
+    font-size: 18px;
+    overflow-x: auto;
+}
+
+.box .Profile_Text_Base #ProgrammingLanguage {
+    padding-top: 1%;
+    padding-left: 4%;
+    font-size: 30px;
+}
+
+.box .Profile_Text_Base #LanguageLogo {
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 40px;
+}
+
+.box .Profile_Text_Base .CodeLogo {
+    padding-left: 4%;
+}
+
+/* =========================
+   LINK
+========================= */
+
+.link-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* =========================
+   BUG REPORT
+========================= */
+
 .bug-box {
     background: #fff;
     padding: 25px;
@@ -188,7 +200,6 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
-/* Header */
 .bug-header {
     display: flex;
     justify-content: space-between;
@@ -212,11 +223,11 @@ footer {
 .severity.high { background: #e74c3c; }
 .priority.medium { background: #f39c12; }
 
-/* Environment Grid */
+/* Environment grid */
 .bug-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -231,7 +242,7 @@ footer {
     padding-left: 8px;
 }
 
-/* Image Placeholder */
+/* Image placeholder */
 .image-placeholder {
     margin-top: 10px;
     height: 150px;
@@ -244,25 +255,48 @@ footer {
     background: #fafafa;
 }
 
-/* Mobile */
+/* =========================
+   PRE FIX (Responsive)
+========================= */
+
+pre {
+    white-space: pre;
+    overflow-x: auto;
+    max-width: 100%;
+    font-size: clamp(13px, 1vw, 16px);
+    line-height: 1.5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
+
     body {
         font-size: 16px;
     }
 
-    .cover h1 {
-        font-size: 36px;
-    }
-
-    .cover p {
-        font-size: 18px;
-    }
-
-    .section {
-        padding: 30px 15px; /* ลดระยะห่างในมือถือ */
-    }
-
     .section h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
+
+    .bug-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .bug-badges span {
+        margin-left: 0;
+        margin-right: 8px;
+        margin-top: 5px;
+    }
+
+    .test-table th,
+    .test-table td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
 }
