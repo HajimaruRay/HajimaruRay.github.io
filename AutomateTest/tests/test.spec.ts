@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('Goto Web', async ({ page }) => {
   await page.goto('/');
   
-  await expect(page).toHaveTitle("Chonlatree Portfilo");
+  await expect(page).toHaveTitle("Chonlatree Portfolio");
   await expect(page.getByRole('heading', { name: 'I\'m Chonlatree Ketkorwoing' })).toBeVisible();
 });
 
@@ -30,7 +30,7 @@ test('Click Home Link', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: 'Home' }).click();
 
-  await expect(page).toHaveTitle("Chonlatree Portfilo");
+  await expect(page).toHaveTitle("Chonlatree Portfolio");
   await expect(page.getByRole('heading', { name: 'I\'m Chonlatree Ketkorwoing' })).toBeVisible();
 });
 
