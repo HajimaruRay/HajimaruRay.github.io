@@ -43,6 +43,21 @@ npm run dev
 
 Open the URL shown in the terminal, normally `http://localhost:5173/`.
 
+## API Configuration
+
+API settings are stored in the `config/` folder:
+
+- `config/.env` contains the local API base URL and login endpoint path.
+- `config/.endpoint` documents the login request format.
+
+The API service sends a `POST` request to:
+
+```text
+${VITE_API_URL}${VITE_LOGIN_ENDPOINT}
+```
+
+The default local values are `http://localhost:3000/api` and `/login`. The `.env` file is ignored by Git because it may contain environment-specific or sensitive values.
+
 ## Available Commands
 
 | Command | Description |

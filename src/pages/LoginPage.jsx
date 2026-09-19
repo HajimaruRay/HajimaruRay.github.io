@@ -1,24 +1,37 @@
 import { useState } from 'react'
+import { loginUser } from '../services/authApi'
 
 export function LoginPage() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const [message, setMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = () => {
-    if (username === 'admin' && password === 'admin') {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setMessage('')
+    setIsSubmitting(true)
+
+    try {
+      // The API should return a token when authentication succeeds.
+      const data = await loginUser(username, password)
+      if (data.token) {
+        sessionStorage.setItem('authToken', data.token)
+      }
       sessionStorage.setItem('isLogin', 'true')
       setMessage('Login successful')
-      return
+    } catch (error) {
+      error.message === 'Failed to fetch' ? setMessage('Unable to connect to the login service') :
+      setMessage(error.message || 'Unable to connect to the login service')
+    } finally {
+      setIsSubmitting(false)
     }
-
-    setMessage('Invalid username or password')
   }
 
   return (
     <main className="page-shell login-page" data-testid="login-page">
-      <div className="login-card" data-testid="login-card">
+      <form className="login-card" onSubmit={handleSubmit} data-testid="login-card">
         <div className="field-row" data-testid="login-username-field">
           <label htmlFor="login-username" data-testid="login-username-label">User Name :</label>
           <input
@@ -46,12 +59,12 @@ export function LoginPage() {
           </button>
         </div>
 
-        <button type="button" className="primary-button login-btn" onClick={handleSubmit} data-testid="login-submit-button">
-          Login
+        <button type="submit" className="primary-button login-btn" disabled={isSubmitting} data-testid="login-submit-button">
+          {isSubmitting ? 'Logging in...' : 'Login'}
         </button>
 
         {message && <p className="login-message" data-testid="login-message">{message}</p>}
-      </div>
+      </form>
     </main>
   )
 }
