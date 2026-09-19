@@ -1,316 +1,86 @@
-@reference "./index.css";
-
-@layer components {
-  .app-shell {
-    @apply flex min-h-screen flex-col bg-paper;
-  }
-
-  .topbar {
-    @apply sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-ink px-5 py-4 text-white shadow-lg shadow-slate-950/10;
-  }
-
-  .brand {
-    @apply cursor-pointer border-0 bg-transparent p-0 font-display text-base font-semibold tracking-tight text-white transition-colors hover:text-orange-300;
-  }
-
-  .desktop-nav {
-    @apply hidden items-center gap-5 md:flex;
-  }
-
-  .nav-item {
-    @apply relative border-0 bg-transparent p-0 text-sm font-medium text-slate-300 no-underline transition-colors hover:text-white;
-  }
-
-  .nav-item::after {
-    @apply absolute -bottom-2 left-0 h-0.5 w-0 bg-accent transition-all content-[''];
-  }
-
-  .nav-item:hover::after,
-  .nav-item.active::after {
-    @apply w-full;
-  }
-
-  .nav-item.active {
-    @apply text-white;
-  }
-
-  .mobile-nav {
-    @apply block rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white outline-none focus:border-orange-300 md:hidden;
-  }
-
-  .page-shell {
-    @apply mx-auto w-full max-w-6xl flex-1 px-5 py-12 sm:px-8;
-  }
-
-  .home-hero {
-    @apply mx-auto max-w-4xl py-12 text-center;
-  }
-
-  .home-hero h1 {
-    @apply m-0 font-display text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-ink;
-  }
-
-  .home-hero h3 {
-    @apply mx-auto mt-7 max-w-2xl text-lg font-medium leading-relaxed text-muted;
-  }
-
-  @media (min-width: 40rem) {
-    .home-hero {
-      @apply py-20;
-    }
-
-    .home-hero h1 {
-      @apply text-7xl;
-    }
-
-    .home-hero h3 {
-      @apply text-2xl;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .home-hero h1 {
-      @apply text-8xl;
-    }
-  }
-
-  .primary-button,
-  .secondary-button,
-  .show-password-btn {
-    @apply cursor-pointer rounded-md border px-5 py-3 text-sm font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
-  }
-
-  .primary-button {
-    @apply border-ink bg-ink text-white hover:-translate-y-0.5 hover:bg-slate-700;
-  }
-
-  .secondary-button,
-  .show-password-btn {
-    @apply border-line bg-white text-ink hover:-translate-y-0.5 hover:border-ink;
-  }
-
-  .home-hero .primary-button {
-    @apply mt-8;
-  }
-
-  .games-section {
-    @apply mx-auto max-w-5xl pt-4 text-center;
-  }
-
-  .games-section h2 {
-    @apply font-display text-3xl font-semibold tracking-tight text-ink;
-  }
-
-  .games-grid {
-    @apply mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2;
-  }
-
-  .game-card {
-    @apply text-center;
-  }
-
-  .game-card img {
-    @apply mx-auto aspect-square w-48 rounded-xl object-cover shadow-xl shadow-slate-900/10 transition-transform hover:-translate-y-1;
-  }
-
-  .game-card h3 {
-    @apply mt-4 font-display text-lg font-semibold text-ink;
-  }
-
-  .divider {
-    @apply my-8 h-1.5 border-0 bg-ink;
-  }
-
-  .contact-footer {
-    @apply mx-auto w-full max-w-6xl px-5 pb-10 text-center sm:px-8;
-  }
-
-  .contact-block {
-    @apply mt-8;
-  }
-
-  .contact-title {
-    @apply mb-4 font-display text-lg font-semibold text-ink;
-  }
-
-  .social-links {
-    @apply flex justify-center gap-4;
-  }
-
-  .social-links a {
-    @apply rounded-full transition-transform hover:-translate-y-1;
-  }
-
-  .social-links a img {
-    @apply h-10 w-10 rounded-full object-cover;
-  }
-
-  .profile-page,
-  .education-page {
-    @apply max-w-6xl;
-  }
-
-  .profile-layout,
-  .education-layout {
-    @apply flex flex-col items-center gap-10 py-4 md:flex-row md:items-start md:gap-16;
-  }
-
-  .profile-photo {
-    @apply h-52 w-52 shrink-0 rounded-2xl border-2 border-ink object-cover shadow-xl shadow-slate-900/10 sm:h-64 sm:w-64;
-  }
-
-  .profile-content,
-  .education-content {
-    @apply min-w-0 flex-1;
-  }
-
-  .profile-content h2 {
-    @apply m-0 font-display text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl;
-  }
-
-  .profile-content h2 img {
-    @apply inline-block h-8 w-8 align-middle;
-  }
-
-  .profile-content h3 {
-    @apply mb-3 mt-8 font-display text-2xl font-semibold text-ink;
-  }
-
-  .profile-content hr,
-  .education-content hr {
-    @apply my-4 border-0 border-t border-line;
-  }
-
-  .info-block p {
-    @apply my-2 text-base leading-relaxed text-muted;
-  }
-
-  .info-block a,
-  .education-item a,
-  .cover-card a {
-    @apply font-medium text-ink underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent;
-  }
-
-  .logo-row {
-    @apply flex flex-wrap gap-3 pt-2;
-  }
-
-  .logo-row a {
-    @apply rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md;
-  }
-
-  .logo-row img {
-    @apply h-10 w-10 object-contain;
-  }
-
-  .cover-card {
-    @apply pb-10 pt-2 text-center;
-  }
-
-  .cover-card img {
-    @apply mx-auto mb-5 h-36 w-36 rounded-2xl border-2 border-ink object-cover shadow-lg;
-  }
-
-  .cover-card h1 {
-    @apply m-0 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl;
-  }
-
-  .cover-card p {
-    @apply mt-3 text-lg text-muted;
-  }
-
-  .cover-card div {
-    @apply mt-4;
-  }
-
-  .content-card {
-    @apply mx-auto mb-6 max-w-5xl rounded-xl border border-line/70 bg-white p-6 shadow-sm sm:p-8;
-  }
-
-  .content-card h2 {
-    @apply m-0 font-display text-2xl font-semibold text-ink;
-  }
-
-  .content-card div {
-    @apply mt-5 flex flex-col gap-2;
-  }
-
-  .content-card p {
-    @apply m-0 leading-relaxed text-muted;
-  }
-
-  .education-item {
-    @apply flex flex-col gap-1;
-  }
-
-  .education-item h3 {
-    @apply m-0 font-display text-2xl font-semibold text-ink;
-  }
-
-  .education-item span,
-  .education-item p {
-    @apply text-muted;
-  }
-
-  .login-page,
-  .fuel-page {
-    @apply flex items-center justify-center;
-  }
-
-  .login-card,
-  .fuel-card {
-    @apply w-full rounded-xl border border-line/70 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8;
-  }
-
-  .login-card {
-    @apply max-w-lg;
-  }
-
-  .fuel-card {
-    @apply max-w-3xl;
-  }
-
-  .field-row,
-  .fuel-field {
-    @apply mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-center sm:gap-3;
-  }
-
-  .field-row label,
-  .fuel-field label {
-    @apply text-sm font-semibold text-ink sm:min-w-40 sm:text-right;
-  }
-
-  .field-row input,
-  .fuel-field input,
-  .fuel-field select {
-    @apply min-w-0 rounded-md border border-line bg-white px-3 py-2 text-ink outline-none transition-colors placeholder:text-slate-400 focus:border-accent focus:ring-2 focus:ring-orange-100;
-  }
-
-  .field-row input {
-    @apply flex-1;
-  }
-
-  .fuel-field input {
-    @apply w-full sm:max-w-xs;
-  }
-
-  .login-btn {
-    @apply mx-auto mt-4 block;
-  }
-
-  .login-message {
-    @apply mt-4 text-center font-medium text-muted;
-  }
-
-  .fuel-actions {
-    @apply mt-7 flex justify-center gap-3;
-  }
-
-  .fuel-result {
-    @apply mt-6 whitespace-pre-line text-center text-lg font-medium leading-loose text-ink;
-  }
-
-  .mobile-only {
-    @apply hidden;
-  }
+/* Component styles use standard CSS so the built stylesheet parses consistently on static hosting. */
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; background: #f8fafc; }
+.topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; color: #fff; background: #101828; border-bottom: 1px solid rgba(255,255,255,.1); box-shadow: 0 10px 25px rgba(15,23,42,.1); }
+.brand { padding: 0; color: #fff; background: transparent; border: 0; font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.brand:hover { color: #fdba74; }
+.desktop-nav { display: flex; align-items: center; gap: 1.25rem; }
+.nav-item { position: relative; color: #cbd5e1; font-size: .875rem; font-weight: 500; text-decoration: none; }
+.nav-item:hover, .nav-item.active { color: #fff; }
+.nav-item::after { position: absolute; right: 0; bottom: -.5rem; left: 0; height: 2px; background: #f97316; content: ''; transform: scaleX(0); transition: transform .2s ease; }
+.nav-item:hover::after, .nav-item.active::after { transform: scaleX(1); }
+.mobile-nav { display: none; padding: .5rem .75rem; color: #fff; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: .375rem; }
+.page-shell { width: 100%; max-width: 72rem; flex: 1; margin: 0 auto; padding: 3rem 1.25rem; }
+.home-hero { max-width: 56rem; margin: 0 auto; padding: 3rem 0; text-align: center; }
+.home-hero h1 { margin: 0; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 600; line-height: .98; letter-spacing: -.06em; }
+.home-hero h3 { max-width: 42rem; margin: 1.75rem auto 0; color: #667085; font-size: 1.125rem; font-weight: 500; line-height: 1.625; }
+.primary-button, .secondary-button, .show-password-btn { padding: .75rem 1.25rem; border: 1px solid #d0d5dd; border-radius: .375rem; font-size: .875rem; font-weight: 600; cursor: pointer; transition: .2s ease; }
+.primary-button { color: #fff; background: #101828; border-color: #101828; }
+.primary-button:hover, .secondary-button:hover, .show-password-btn:hover { transform: translateY(-2px); }
+.primary-button:hover { background: #344054; }
+.secondary-button, .show-password-btn { color: #101828; background: #fff; }
+.home-hero .primary-button { margin-top: 2rem; }
+.games-section { max-width: 64rem; margin: 0 auto; padding-top: 1rem; text-align: center; }
+.divider { height: 6px; margin: 2rem 0; background: #101828; border: 0; }
+.games-section h2 { color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 1.875rem; }
+.games-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+.game-card { text-align: center; }
+.game-card img { display: block; width: 12rem; aspect-ratio: 1; margin: 0 auto; object-fit: cover; border-radius: .75rem; box-shadow: 0 10px 25px rgba(15,23,42,.1); }
+.game-card h3 { margin-top: 1rem; color: #101828; font-family: 'Space Grotesk', sans-serif; }
+.contact-footer { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 1.25rem 2.5rem; text-align: center; }
+.contact-title { margin-bottom: 1rem; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 1.125rem; font-weight: 600; }
+.social-links { display: flex; justify-content: center; gap: 1rem; }
+.social-links a img { width: 2.5rem; height: 2.5rem; border-radius: 50%; object-fit: cover; }
+.profile-page, .education-page { max-width: 72rem; }
+.profile-layout, .education-layout { display: flex; align-items: flex-start; gap: 4rem; padding: 1rem 0; }
+.profile-photo { width: 16rem; height: 16rem; flex-shrink: 0; object-fit: cover; border: 2px solid #101828; border-radius: 1rem; box-shadow: 0 10px 25px rgba(15,23,42,.1); }
+.profile-content, .education-content { min-width: 0; flex: 1; }
+.profile-content h2 { margin: 0; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 2.25rem; font-weight: 600; line-height: 1.1; }
+.profile-content h2 img { display: inline-block; width: 2rem; height: 2rem; vertical-align: middle; }
+.profile-content h3 { margin: 2rem 0 .75rem; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; }
+.profile-content hr, .education-content hr { margin: 1rem 0; border: 0; border-top: 1px solid #d0d5dd; }
+.info-block p, .education-item span, .education-item p, .content-card p { color: #667085; line-height: 1.625; }
+.info-block a, .education-item a, .cover-card a { color: #101828; text-decoration: underline; text-decoration-color: #f97316; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.logo-row { display: flex; flex-wrap: wrap; gap: .75rem; padding-top: .5rem; }
+.logo-row a { padding: .5rem; background: #fff; border: 1px solid #d0d5dd; border-radius: .5rem; }
+.logo-row img { width: 2.5rem; height: 2.5rem; object-fit: contain; }
+.cover-card { padding: .5rem 0 2.5rem; text-align: center; }
+.cover-card img { width: 9rem; height: 9rem; margin: 0 auto 1.25rem; object-fit: cover; border: 2px solid #101828; border-radius: 1rem; }
+.cover-card h1 { margin: 0; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 3.75rem; }
+.cover-card p { margin-top: .75rem; color: #667085; font-size: 1.125rem; }
+.content-card, .login-card, .fuel-card { background: #fff; border: 1px solid rgba(208,213,221,.7); border-radius: .75rem; box-shadow: 0 10px 25px rgba(15,23,42,.05); }
+.content-card { max-width: 56rem; margin: 0 auto 1.5rem; padding: 2rem; }
+.content-card h2 { margin: 0; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; }
+.content-card div { display: flex; flex-direction: column; gap: .5rem; margin-top: 1.25rem; }
+.education-item { display: flex; flex-direction: column; gap: .25rem; }
+.education-item h3 { margin: 0; color: #101828; font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; }
+.login-page, .fuel-page { display: flex; align-items: center; justify-content: center; }
+.login-card, .fuel-card { width: 100%; padding: 2rem; }
+.login-card { max-width: 32rem; }
+.fuel-card { max-width: 48rem; }
+.field-row, .fuel-field { display: flex; align-items: center; justify-content: center; gap: .75rem; margin-bottom: 1rem; }
+.field-row label, .fuel-field label { min-width: 10rem; color: #101828; font-size: .875rem; font-weight: 600; text-align: right; }
+.field-row input, .fuel-field input, .fuel-field select { min-width: 0; padding: .5rem .75rem; color: #101828; background: #fff; border: 1px solid #d0d5dd; border-radius: .375rem; }
+.field-row input { flex: 1; }
+.fuel-field input { width: 100%; max-width: 20rem; }
+.login-btn { display: block; margin: 1rem auto 0; }
+.login-message, .fuel-result { margin-top: 1.5rem; text-align: center; }
+.fuel-result { white-space: pre-line; color: #101828; font-size: 1.125rem; line-height: 1.8; }
+@media (max-width: 767px) {
+  .desktop-nav { display: none; }
+  .mobile-nav { display: block; }
+  .page-shell { padding: 2rem 1.25rem; }
+  .games-grid { grid-template-columns: 1fr; }
+  .profile-layout, .education-layout, .field-row, .fuel-field { flex-direction: column; align-items: stretch; }
+  .profile-layout, .education-layout { align-items: center; gap: 2.5rem; }
+  .field-row label, .fuel-field label { min-width: 0; text-align: left; }
+  .profile-photo { width: 13rem; height: 13rem; }
+  .cover-card h1 { font-size: 2.5rem; }
+}
+@media (min-width: 40rem) {
+  .home-hero { padding: 5rem 0; }
+  .home-hero h1 { font-size: 4.5rem; }
+  .home-hero h3 { font-size: 1.5rem; }
+}
+@media (min-width: 64rem) {
+  .home-hero h1 { font-size: 6rem; }
 }
