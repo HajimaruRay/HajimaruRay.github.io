@@ -1,47 +1,98 @@
-# Portfilo Web Application
+# Chonlatree Ketkorwoing Portfolio
 
-โปรเจคนี้พัฒนาขึ้นมาเพื่อใช้เป็น Web Application นำเสนอเเละเก็บรวบรวมผลงานที่เคยทำมาตลอดจนถึงปัจจุบัน
+Personal portfolio website built with React, Vite, React Router, and Tailwind CSS v4.
 
-## ภาษาที่ใช้ในการพัฒนา
+## Features
 
-- HTML ใช้สำหรับวางโครงสร้างของ Web Application
-- CSS ใช้สำหรับเเก้ไขตกเเต่งหน้าตาของ Web Application
-- JavaScript ใช้สำหรับเขียนเงื่อนไขหรือ Script ใดๆใน Web Application
+- Responsive portfolio layout for desktop and mobile screens
+- Client-side navigation with React Router
+- Home page with game development projects
+- Profile and education pages
+- Portfolio page with testing experience
+- Login page with password visibility toggle
+- Fuel calculator page
+- Reusable navigation and contact footer components
+- Stable `data-testid` attributes for UI testing
 
-## ส่วนประกอบของ Web Application
+## Tech Stack
 
-- index.html
+- React 19
+- Vite
+- React Router
+- Tailwind CSS v4
+- Oxlint
 
-  - เเสดงหน้าเเรก
-  - เเสดงโปรเจคเกมส์ที่เคยสร้างขึ้นส่วนหนึ่ง
+## Getting Started
 
-- Profile.html
+Requirements:
 
-  - เเสดงประวัติส่วนตัว
+- Node.js 18 or newer
+- npm
 
-- EducationalRecord.html
+Install dependencies:
 
-  - เเสดงประวัติการศึกษา
-
-- PasswordCheck.html
-
-  - หน้า Login เพื่อเข้าสู่ระบบในเมนูเฉพาะนักพัฒนา
-
-- FuelCalculater.html
-
-  - ใช้คำนวณราคาน้ำมัน สร้างขึ้นเพื่อความง่ายในการคำนวณ
- 
-## วิธีการใช้งาน
-
-เข้าใช้งานผ่านลิงค์ URL
-```text
-https://hajimaruray.github.io/
+```bash
+npm install
 ```
-หรือ [คลิกที่นี่](https://hajimaruray.github.io/)
 
-## ติดต่อ
+Start the local development server:
 
-หากมีคำถามหรือข้อเสนอแนะ ติดต่อได้ที่
+```bash
+npm run dev
+```
 
-- Email: chonlatreeketkorwoingwork@gmail.com
-- GitHub: https://github.com/HajimaruRay
+Open the URL shown in the terminal, normally `http://localhost:5173/`.
+
+## Available Commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run Oxlint |
+
+## Routes
+
+| Path | Page |
+| --- | --- |
+| `/` | Home |
+| `/profile` | Profile |
+| `/portfolio` | Portfolio and testing experience |
+| `/education` | Educational record |
+| `/login` | Login form |
+| `/fuel` | Fuel calculator |
+
+The Fuel Calculator route is available directly at `/fuel`, although it is currently hidden from the main navigation menu.
+
+## Project Structure
+
+```text
+src/
+├── components/       Shared UI components
+├── data/              Navigation and static data
+├── layouts/           Shared page layouts
+├── pages/             Routed page components
+├── routes/            React Router configuration
+├── App.css            Tailwind component styles
+├── App.jsx            Application entry and router provider
+├── index.css          Global Tailwind theme and base styles
+└── main.jsx           React DOM entry point
+
+Photo/icon/            Portfolio images and social icons
+index.html             Vite HTML entry point
+vite.config.js         Vite and Tailwind configuration
+```
+
+## Production Preview
+
+Build and preview the production version locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Deployment
+
+The repository includes `deploy.bat` for the existing Git-based deployment workflow. Review the target branch and remote before running it.
