@@ -43,15 +43,35 @@
   }
 
   .home-hero {
-    @apply mx-auto max-w-4xl py-12 text-center sm:py-20;
+    @apply mx-auto max-w-4xl py-12 text-center;
   }
 
   .home-hero h1 {
-    @apply m-0 font-display text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-ink sm:text-7xl lg:text-8xl;
+    @apply m-0 font-display text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-ink;
   }
 
   .home-hero h3 {
-    @apply mx-auto mt-7 max-w-2xl text-lg font-medium leading-relaxed text-muted sm:text-2xl;
+    @apply mx-auto mt-7 max-w-2xl text-lg font-medium leading-relaxed text-muted;
+  }
+
+  @media (min-width: 40rem) {
+    .home-hero {
+      @apply py-20;
+    }
+
+    .home-hero h1 {
+      @apply text-7xl;
+    }
+
+    .home-hero h3 {
+      @apply text-2xl;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .home-hero h1 {
+      @apply text-8xl;
+    }
   }
 
   .primary-button,
