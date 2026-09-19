@@ -15,41 +15,41 @@
     <script src="/Json/DropDown.js"></script>
 
      <!--Navbar-->
-    <div class="Navbar">
-        <div class="Name">
-            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html">Chonlatree Ketkorwoing</a>
+    <div class="Navbar" data-testid="portfolio-navbar">
+        <div class="Name" data-testid="portfolio-navbar-name">
+            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html" data-testid="portfolio-login-link">Chonlatree Ketkorwoing</a>
         </div>
 
-        <select class="selector" onchange="window.location.href=this.value;">
+        <select class="selector" data-testid="portfolio-navigation-select" onchange="window.location.href=this.value;">
             <option value="/index.html">Home</option>
             <option value="/HTML/Profile.html">Profile</option>
             <option value="/HTML/Portfilo.html">Portfolio</option>
             <option value="/HTML/EducationalRecord.html">Educational Record</option>
         </select>
 
-        <ul>
-                <li class="link"> <a href="/index.html">Home</a> </li>
-                <li class="link"> <a href="/HTML/Profile.html">Profile</a> </li>
-                <li class="link"> <a href="/HTML/Portfilo.html">Portfolio</a> </li>
-                <li class="link"> <a href="/HTML/EducationalRecord.html">Educational Record</a> </li>
+        <ul data-testid="portfolio-navigation-list">
+                <li class="link"> <a href="/index.html" data-testid="portfolio-nav-home-link">Home</a> </li>
+                <li class="link"> <a href="/HTML/Profile.html" data-testid="portfolio-nav-profile-link">Profile</a> </li>
+                <li class="link"> <a href="/HTML/Portfilo.html" data-testid="portfolio-nav-portfolio-link">Portfolio</a> </li>
+                <li class="link"> <a href="/HTML/EducationalRecord.html" data-testid="portfolio-nav-education-link">Educational Record</a> </li>
         </ul>
     </div>
 
     <!--Content Zone-->
-    <section class="cover">
-    <div>
-        <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo">
-        <h1>Chonlatree Ketkorwoing</h1>
-        <p>Software Test Engineer | Manual QA | Automation</p>
-        <a href="mailto:chonlareeketkorwoingwork@gmail.com" style="color: rgb(0, 0, 0);">[Email]</a>
+    <section class="cover" data-testid="portfolio-cover">
+    <div data-testid="portfolio-cover-content">
+        <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo" data-testid="portfolio-profile-photo">
+        <h1 data-testid="portfolio-name-heading">Chonlatree Ketkorwoing</h1>
+        <p data-testid="portfolio-role">Software Test Engineer | Manual QA | Automation</p>
+        <a href="mailto:chonlareeketkorwoingwork@gmail.com" style="color: rgb(0, 0, 0);" data-testid="portfolio-email-link">[Email]</a>
         <a> | </a>
-        <a href="https://github.com/HajimaruRay" style="color: rgb(0, 0, 0);">[Github]</a>
+        <a href="https://github.com/HajimaruRay" style="color: rgb(0, 0, 0);" data-testid="portfolio-github-cover-link">[Github]</a>
     </div>
     </section>
 
-    <section id="summary" class="section">
-        <h2>Professional Summary</h2>
-        <div class="box">
+    <section id="summary" class="section" data-testid="portfolio-summary-section">
+        <h2 data-testid="portfolio-summary-heading">Professional Summary</h2>
+        <div class="box" data-testid="portfolio-summary-content">
             <a>&emsp;&emsp;Computer Science student with experience as a Manual Software Tester, responsible for designing and creating test cases, executing test scenarios, recording test results, and preparing detailed bug reports. Experienced in working within an Agile environment and collaborating closely with developers and team members to ensure software quality and support issue resolution.</a> <br>
             <a>&emsp;&emsp;Hands-on experience in testing internal web-based systems, including an Employee Medical Benefits System and an Employee Performance Evaluation System. Performed manual UI testing for web applications on both desktop environments and responsive layouts to ensure correct functionality and consistent user experience across different screen sizes.</a> <br>
             <a>&emsp;&emsp;Additionally, gained basic experience in API testing using Postman to verify request and response behavior.</a> <br>
@@ -57,9 +57,9 @@
         </div>
     </section>
 
-    <section id="internship" class="section">
-        <h2>Internship Experience</h2>
-        <div class="box">
+    <section id="internship" class="section" data-testid="portfolio-internship-section">
+        <h2 data-testid="portfolio-internship-heading">Internship Experience</h2>
+        <div class="box" data-testid="portfolio-internship-content">
             <h3>Software Tester (Intern) – Move Plus Co., Ltd. (Oct 2025 – Present) </h3>
             <pre>
             • Designed and executed manual test cases based on system requirements
@@ -71,9 +71,9 @@
         </div>
     </section>
 
-    <section id="manual" class="section">
-        <h2>Manual Testing Experience</h2>
-        <div class="box">
+    <section id="manual" class="section" data-testid="portfolio-manual-section">
+        <h2 data-testid="portfolio-manual-heading">Manual Testing Experience</h2>
+        <div class="box" data-testid="portfolio-manual-content">
             <h3>Manual Testing Experience</h3>
             <pre>
                 • Performed manual testing for internal Web Applications, including:
@@ -102,9 +102,9 @@
         </div>
     </section>
 
-    <section id="Automate" class="section">
-        <h2>Automation Testing Experience</h2>
-        <div class="box">
+    <section id="Automate" class="section" data-testid="portfolio-automation-section">
+        <h2 data-testid="portfolio-automation-heading">Automation Testing Experience</h2>
+        <div class="box" data-testid="portfolio-automation-content">
             <h3>Automation Testing Experience</h3>
             <pre>
                 • Developed automated test scripts for End-to-End (E2E) Regression Testing (personal practice project – work in progress)
@@ -125,18 +125,18 @@
             </pre>
             <h3>Code Repository</h3>
             <pre>
-                SaucedemoAutomateTest Github: <a href="https://github.com/HajimaruRay/SaucedemoAutomateTest.git" target="_blank">Link!</a>
-                Web Profile Github: <a href="https://github.com/HajimaruRay/HajimaruRay.github.io.git" target="_blank">Link!</a>
+                SaucedemoAutomateTest Github: <a href="https://github.com/HajimaruRay/SaucedemoAutomateTest.git" target="_blank" data-testid="portfolio-saucedemo-repository-link">Link!</a>
+                Web Profile Github: <a href="https://github.com/HajimaruRay/HajimaruRay.github.io.git" target="_blank" data-testid="portfolio-web-profile-repository-link">Link!</a>
             </pre>
         </div>
     </section>
 
-    <section id="TestCase design Example" class="section">
-        <h2>TestCase design Example</h2>
-        <div class="box">
+    <section id="TestCase design Example" class="section" data-testid="portfolio-test-case-section">
+        <h2 data-testid="portfolio-test-case-heading">TestCase design Example</h2>
+        <div class="box" data-testid="portfolio-test-case-content">
             <h3>Test case for Manual UI Testing</h3>
             <div class="table-container">
-                <table class="test-table">
+                <table class="test-table" data-testid="portfolio-manual-test-table">
 
                     <!-- Section Title -->
                     <tr class="section-row">
@@ -214,7 +214,7 @@
             
             <h3>Test case for Smoke Test</h3>
             <div class="table-container">
-                <table class="test-table">
+                <table class="test-table" data-testid="portfolio-smoke-test-table">
 
                     <!-- Section Title -->
                     <tr class="section-row">
@@ -352,7 +352,7 @@
             </div>
             <h3>Test case for Regression Test</h3>
                         <div class="table-container">
-                <table class="test-table">
+                <table class="test-table" data-testid="portfolio-regression-test-table">
 
                     <!-- Section Title -->
                     <tr class="section-row">
@@ -499,8 +499,8 @@
         </div>
     </section>
 
-    <section id="bug" class="section">
-        <h2>Bug Report Example</h2>
+    <section id="bug" class="section" data-testid="portfolio-bug-section">
+        <h2 data-testid="portfolio-bug-heading">Bug Report Example</h2>
 
         <div class="bug-box">
             <div class="bug-header">
@@ -532,9 +532,9 @@
     </section>
 
     <!-- Testing Knowledge -->
-    <section id="knowledge" class="section">
-        <h2>Testing Knowledge</h2>
-        <div class="box">
+    <section id="knowledge" class="section" data-testid="portfolio-knowledge-section">
+        <h2 data-testid="portfolio-knowledge-heading">Testing Knowledge</h2>
+        <div class="box" data-testid="portfolio-knowledge-content">
             <h3>Software Testing Fundamentals</h3>
             <pre>
                 - Understanding of Software Testing Life Cycle (STLC)
@@ -601,19 +601,19 @@
     </section>
     
     <!--Contract Zone-->
-    <div class="profile_link">
+    <div class="profile_link" data-testid="portfolio-contact">
         <br>
         <hr id="The_Line">
         <br>
-        <div class="Logo">
-            <ul>
+        <div class="Logo" data-testid="portfolio-contact-links">
+            <ul data-testid="portfolio-contact-list">
                 <li>
-                    <a id="Text-contract">--Contract Me--</a>
+                    <a id="Text-contract" data-testid="portfolio-contact-heading">--Contract Me--</a>
                 </li>
-                <a href="https://github.com/HajimaruRay" target="_blank">
+                <a href="https://github.com/HajimaruRay" target="_blank" data-testid="portfolio-github-link">
                     <img class="photo" src="/Photo/icon/Github.png" width="40px" alt="github">
                 </a>
-                <a href="https://www.facebook.com/hajimaruuu" target="_blank">
+                <a href="https://www.facebook.com/hajimaruuu" target="_blank" data-testid="portfolio-facebook-link">
                     <img class="photo" src="/Photo/icon/facebook.png" width="40px" alt="facebook">
                 </a>
             </ul>

@@ -17,19 +17,19 @@
     <script src="/Json/Blockrightclick.js"></script>
     <script src="/Json/DropDown.js"></script>
          <!--Navbar-->
-    <div class="Navbar">
-        <div class="Name">
+    <div class="Navbar" data-testid="home-navbar">
+        <div class="Name" data-testid="home-navbar-name">
             <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html" data-testid="login-button">Chonlatree Ketkorwoing</a>
         </div>
 
-        <select class="selector" onchange="window.location.href=this.value;">
+        <select class="selector" data-testid="home-navigation-select" onchange="window.location.href=this.value;">
             <option value="/index.html" data-testid="home-button-on-list">Home</option>
             <option value="/HTML/Profile.html" data-testid="profile-button-on-list">Profile</option>
             <option value="/HTML/Portfilo.html" data-testid="portfolio-button-on-list">Portfolio</option>
             <option value="/HTML/EducationalRecord.html" data-testid="educational-record-button-on-list">Educational Record</option>
         </select>
 
-        <ul>
+        <ul data-testid="home-navigation-list">
                 <li class="link"> <a href="/index.html" data-testid="home-button-nav-bar">Home</a> </li>
                 <li class="link"> <a href="/HTML/Profile.html" data-testid="profile-button-nav-bar">Profile</a> </li>
                 <li class="link"> <a href="/HTML/Portfilo.html" data-testid="portfolio-button-nav-bar">Portfolio</a> </li>
@@ -39,18 +39,18 @@
 
     
     <!--Content Zone-->
-    <div class="ContentZone">
-        <div class="Hello-Text">
-            <h1>I'm Chonlatree <br> Ketkorwoing</h1>
-            <h3>Computer Science student, Silpakorn University, 3rd year</h3>
+    <div class="ContentZone" data-testid="home-content">
+        <div class="Hello-Text" data-testid="home-introduction">
+            <h1 data-testid="home-heading">I'm Chonlatree <br> Ketkorwoing</h1>
+            <h3 data-testid="home-subheading">Computer Science student, Silpakorn University, 3rd year</h3>
             <br><br>
         </div>
-        <div class="button">
-            <a href="/HTML/Profile.html">View Profile!</a>
+        <div class="button" data-testid="home-profile-action">
+            <a href="/HTML/Profile.html" data-testid="home-profile-link">View Profile!</a>
         </div>
         <br><br>
         <hr id="The_Line">
-        <div class="Games_Logo_Full">
+        <div class="Games_Logo_Full" data-testid="home-games-desktop">
             <h1>Games Development</h1>
             <table>
                 <tr>
@@ -69,7 +69,7 @@
                 </tr>
             </table>
         </div>
-        <div class="Games_Logo">
+        <div class="Games_Logo" data-testid="home-games-mobile">
             <h1>Games Development</h1>
             <table>
                 <tr>
@@ -90,19 +90,19 @@
     </div>
 
     <!--Contract Zone-->
-    <div class="profile_link">
+    <div class="profile_link" data-testid="home-contact">
         <br>
         <hr id="The_Line">
         <br>
-        <div class="Logo">
-            <ul>
+        <div class="Logo" data-testid="home-contact-links">
+            <ul data-testid="home-contact-list">
                 <li>
-                    <a id="Text-contract">--Contract Me--</a>
+                    <a id="Text-contract" data-testid="home-contact-heading">--Contract Me--</a>
                 </li>
-                <a href="https://github.com/HajimaruRay" target="_blank">
+                <a href="https://github.com/HajimaruRay" target="_blank" data-testid="home-github-link">
                     <img class="photo" src="/Photo/icon/Github.png" width="40px" alt="github">
                 </a>
-                <a href="https://www.facebook.com/hajimaruuu" target="_blank">
+                <a href="https://www.facebook.com/hajimaruuu" target="_blank" data-testid="home-facebook-link">
                     <img class="photo" src="/Photo/icon/facebook.png" width="40px" alt="facebook">
                 </a>
             </ul>

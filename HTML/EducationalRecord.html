@@ -15,52 +15,52 @@
     <script src="/Json/Blockrightclick.js"></script>
     <script src="/Json/DropDown.js"></script>
          <!--Navbar-->
-    <div class="Navbar">
-        <div class="Name">
-            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html">Chonlatree Ketkorwoing</a>
+    <div class="Navbar" data-testid="education-navbar">
+        <div class="Name" data-testid="education-navbar-name">
+            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html" data-testid="education-login-link">Chonlatree Ketkorwoing</a>
         </div>
 
-        <select class="selector" onchange="window.location.href=this.value;">
+        <select class="selector" data-testid="education-navigation-select" onchange="window.location.href=this.value;">
             <option value="/index.html">Home</option>
             <option value="/HTML/Profile.html">Profile</option>
             <option value="/HTML/Portfilo.html">Portfolio</option>
             <option value="/HTML/EducationalRecord.html">Educational Record</option>
         </select>
 
-        <ul>
-                <li class="link"> <a href="/index.html">Home</a> </li>
-                <li class="link"> <a href="/HTML/Profile.html">Profile</a> </li>
-                <li class="link"> <a href="/HTML/Portfilo.html">Portfolio</a> </li>
-                <li class="link"> <a href="/HTML/EducationalRecord.html">Educational Record</a> </li>
+        <ul data-testid="education-navigation-list">
+                <li class="link"> <a href="/index.html" data-testid="education-nav-home-link">Home</a> </li>
+                <li class="link"> <a href="/HTML/Profile.html" data-testid="education-nav-profile-link">Profile</a> </li>
+                <li class="link"> <a href="/HTML/Portfilo.html" data-testid="education-nav-portfolio-link">Portfolio</a> </li>
+                <li class="link"> <a href="/HTML/EducationalRecord.html" data-testid="education-nav-education-link">Educational Record</a> </li>
         </ul>
     </div>
 
     <!--Content Zone-->
-    <div class="ContentZone">
-        <table>
+    <div class="ContentZone" data-testid="education-content">
+        <table data-testid="education-record-table">
             <tr>
                 <td>
-                    <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo">
+                    <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo" data-testid="education-profile-photo">
                 </td>
                 <td>
-                    <div class="PrimarySchool">
-                        <h3>Primary School</h3>
+                    <div class="PrimarySchool" data-testid="education-primary-school">
+                        <h3 data-testid="education-primary-heading">Primary School</h3>
                         <span>at</span>
-                        <a class="School_link" href="https://www.facebook.com/MarieWittayaMWN/" target="_blank">Marie Wittaya Nonthaburi School</a><br>
+                        <a class="School_link" href="https://www.facebook.com/MarieWittayaMWN/" target="_blank" data-testid="education-primary-link">Marie Wittaya Nonthaburi School</a><br>
                         <span>2010 - 2016</span>
                     </div>
                     <hr id="Line">
-                    <div class="SecondarySchool">
-                        <h3>Secondary School</h3>
+                    <div class="SecondarySchool" data-testid="education-secondary-school">
+                        <h3 data-testid="education-secondary-heading">Secondary School</h3>
                         <span>at</span>
-                        <a class="School_link" href="https://tpn.ac.th/home-2/" target="_blank">Tramudom Scksa Pattanakarn Nonthaburi School</a><br>
+                        <a class="School_link" href="https://tpn.ac.th/home-2/" target="_blank" data-testid="education-secondary-link">Tramudom Scksa Pattanakarn Nonthaburi School</a><br>
                         <span>2016 - 2022</span>
                     </div>
                     <hr id="Line">
-                    <div class="BachelorDegree">
-                        <h3>Bachelor's degree</h3>
+                    <div class="BachelorDegree" data-testid="education-bachelor-degree">
+                        <h3 data-testid="education-bachelor-heading">Bachelor's degree</h3>
                         <span>at</span>
-                        <a class="School_link" href="https://www.su.ac.th/th/index.php" target="_blank">Silpakorn University</a><br>
+                        <a class="School_link" href="https://www.su.ac.th/th/index.php" target="_blank" data-testid="education-bachelor-link">Silpakorn University</a><br>
                         <a>Faculty of Sciance || Computer Sciance Major</a><br>
                         <span>2023 - Present</span>
                     </div>
@@ -71,19 +71,19 @@
     </div>
     
     <!--Contract Zone-->
-    <div class="profile_link">
+    <div class="profile_link" data-testid="education-contact">
         <br>
         <hr id="The_Line">
         <br>
-        <div class="Logo">
-            <ul>
+        <div class="Logo" data-testid="education-contact-links">
+            <ul data-testid="education-contact-list">
                 <li>
-                    <a id="Text-contract">--Contract Me--</a>
+                    <a id="Text-contract" data-testid="education-contact-heading">--Contract Me--</a>
                 </li>
-                <a href="https://github.com/HajimaruRay" target="_blank">
+                <a href="https://github.com/HajimaruRay" target="_blank" data-testid="education-github-link">
                     <img class="photo" src="/Photo/icon/Github.png" width="40px" alt="github">
                 </a>
-                <a href="https://www.facebook.com/hajimaruuu" target="_blank">
+                <a href="https://www.facebook.com/hajimaruuu" target="_blank" data-testid="education-facebook-link">
                     <img class="photo" src="/Photo/icon/facebook.png" width="40px" alt="facebook">
                 </a>
             </ul>

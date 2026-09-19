@@ -14,51 +14,51 @@
     <script src="/Json/Blockrightclick.js"></script>
     <script src="/Json/DropDown.js"></script>
          <!--Navbar-->
-    <div class="Navbar">
-        <div class="Name">
-            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html">Chonlatree Ketkorwoing</a>
+    <div class="Navbar" data-testid="profile-navbar">
+        <div class="Name" data-testid="profile-navbar-name">
+            <a style="text-decoration: none; color: aliceblue; cursor:text;" href="/HTML/PasswordCheck.html" data-testid="profile-login-link">Chonlatree Ketkorwoing</a>
         </div>
 
-        <select class="selector" onchange="window.location.href=this.value;">
+        <select class="selector" data-testid="profile-navigation-select" onchange="window.location.href=this.value;">
             <option value="/index.html">Home</option>
             <option value="/HTML/Profile.html">Profile</option>
             <option value="/HTML/Portfilo.html">Portfolio</option>
             <option value="/HTML/EducationalRecord.html">Educational Record</option>
         </select>
 
-        <ul>
-                <li class="link"> <a href="/index.html">Home</a> </li>
-                <li class="link"> <a href="/HTML/Profile.html">Profile</a> </li>
-                <li class="link"> <a href="/HTML/Portfilo.html">Portfolio</a> </li>
-                <li class="link"> <a href="/HTML/EducationalRecord.html">Educational Record</a> </li>
+        <ul data-testid="profile-navigation-list">
+                <li class="link"> <a href="/index.html" data-testid="profile-nav-home-link">Home</a> </li>
+                <li class="link"> <a href="/HTML/Profile.html" data-testid="profile-nav-profile-link">Profile</a> </li>
+                <li class="link"> <a href="/HTML/Portfilo.html" data-testid="profile-nav-portfolio-link">Portfolio</a> </li>
+                <li class="link"> <a href="/HTML/EducationalRecord.html" data-testid="profile-nav-education-link">Educational Record</a> </li>
         </ul>
     </div>
 
 
     <!--Content Zone-->
-    <table>
+    <table data-testid="profile-content">
         <tr>
             <td>
-                <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo">
+                <img id="Photo" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo" data-testid="profile-photo">
             </td>
 
             <td>
-                <div class="Profile_Text_Base">
-                    <h2 id="Hi_Text">Hi! <img src=" https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" width="60px"> My name is Chonlatree Ketkorwoing.</h2>
+                <div class="Profile_Text_Base" data-testid="profile-details">
+                    <h2 id="Hi_Text" data-testid="profile-greeting">Hi! <img src=" https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" width="60px" data-testid="profile-greeting-image"> My name is Chonlatree Ketkorwoing.</h2>
                     <hr id="The_Line">
-                    <h2 id="About_Me">About Me!</h2>
+                    <h2 id="About_Me" data-testid="profile-about-heading">About Me!</h2>
                     <hr id="The_Line">
-                    <div id="SubClassOfAboutMe">
+                    <div id="SubClassOfAboutMe" data-testid="profile-about-content">
                         <a>- Student at Silpakorn University | Computer Science | 3rd Years</a><br>
                         <a>- 🌍 Based in Nonthaburi, Thailand</a><br>
                         <a>- ✉️ You can contract me at [</a>
-                        <a id = "Email" href="mailto: chonlareeketkorwoingwork@gmail.com">chonlareeketkorwoingwork@gmail.com</a>
+                        <a id = "Email" href="mailto: chonlareeketkorwoingwork@gmail.com" data-testid="profile-email-link">chonlareeketkorwoingwork@gmail.com</a>
                         <a>]</a><br>
                     </div>
                     <hr id="The_Line">
-                    <h2 id="ProgrammingLanguage">Programming Languages</h2>
+                    <h2 id="ProgrammingLanguage" data-testid="profile-programming-heading">Programming Languages</h2>
                     <hr id="The_Line">
-                    <div class="CodeLogo">
+                    <div class="CodeLogo" data-testid="profile-programming-links">
                         <a id="LanguageLogo" href="https://www.java.com" target="_blank">
                             <img id="LanguageLogo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java"/>
                         </a>
@@ -73,10 +73,10 @@
                         </a>
                     </div>
     
-                    <h2 id="ProgrammingLanguage">Web Development</h2>
+                    <h2 id="ProgrammingLanguage" data-testid="profile-web-heading">Web Development</h2>
                     <hr id="The_Line">
     
-                    <div class="CodeLogo">
+                    <div class="CodeLogo" data-testid="profile-web-links">
                         <a id="LanguageLogo" href="https://www.w3schools.com/css/" target="_blank"> 
                             <img id="LanguageLogo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3"/> 
                         </a>
@@ -91,9 +91,9 @@
                         </a>
                     </div>
     
-                    <h2 id="ProgrammingLanguage">Tools</h2>
+                    <h2 id="ProgrammingLanguage" data-testid="profile-tools-heading">Tools</h2>
                     <hr id="The_Line">
-                    <div class="CodeLogo">
+                    <div class="CodeLogo" data-testid="profile-tools-links">
                         <a id="LanguageLogo" href="https://code.visualstudio.com" target="_blank"> 
                             <img id="LanguageLogo" src="/Photo/icon/Visual_Studio_Code_1.35_icon.svg.png"/>
                         </a> 
@@ -116,19 +116,19 @@
     </table>
     
     <!--Contract Zone-->
-    <div class="profile_link">
+    <div class="profile_link" data-testid="profile-contact">
         <br>
         <hr id="The_Line">
         <br>
-        <div class="Logo">
-            <ul>
+        <div class="Logo" data-testid="profile-contact-links">
+            <ul data-testid="profile-contact-list">
                 <li>
-                    <a id="Text-contract">--Contract Me--</a>
+                    <a id="Text-contract" data-testid="profile-contact-heading">--Contract Me--</a>
                 </li>
-                <a href="https://github.com/HajimaruRay" target="_blank">
+                <a href="https://github.com/HajimaruRay" target="_blank" data-testid="profile-github-link">
                     <img class="photo" src="/Photo/icon/Github.png" width="40px" alt="github">
                 </a>
-                <a href="https://www.facebook.com/hajimaruuu" target="_blank">
+                <a href="https://www.facebook.com/hajimaruuu" target="_blank" data-testid="profile-facebook-link">
                     <img class="photo" src="/Photo/icon/facebook.png" width="40px" alt="facebook">
                 </a>
             </ul>
