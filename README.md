@@ -47,8 +47,8 @@ Open the URL shown in the terminal, normally `http://localhost:5173/`.
 
 API settings are stored in the `config/` folder:
 
-- `config/.env` contains the local API base URL and login endpoint path.
-- `config/.endpoint` documents the login request format.
+- `config/.env.ts` contains the local API base URL.
+- `config/.endpoint.ts` contains the API endpoint paths.
 
 The API service sends a `POST` request to:
 
