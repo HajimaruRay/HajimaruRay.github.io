@@ -4,7 +4,7 @@ import { ContactFooter } from '../components/ContactFooter'
 
 export function MainLayout() {
   return (
-    <div className="app-shell" data-testid="app-shell">
+    <div className="flex min-h-screen flex-col bg-paper" data-testid="app-shell">
       <Navbar />
       <Outlet />
       <ContactFooter />

@@ -65,12 +65,12 @@ const portfolioSections = [
 
 export function PortfolioPage() {
   return (
-    <main className="page-shell portfolio-page" data-testid="portfolio-page">
-      <section className="cover-card" data-testid="portfolio-cover">
-        <img src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo" data-testid="portfolio-profile-photo" />
-        <h1 data-testid="portfolio-heading">Chonlatree Ketkorwoing</h1>
-        <p data-testid="portfolio-subheading">Software Test Engineer | Manual QA | Automation</p>
-        <div data-testid="portfolio-contact-links">
+    <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-12 sm:px-8" data-testid="portfolio-page">
+      <section className="pb-10 pt-2 text-center" data-testid="portfolio-cover">
+        <img className="mx-auto mb-5 h-36 w-36 rounded-2xl border-2 border-ink object-cover shadow-lg" src="/Photo/icon/Profile_Picture.jpg" alt="Profile Photo" data-testid="portfolio-profile-photo" />
+        <h1 className="m-0 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl" data-testid="portfolio-heading">Chonlatree Ketkorwoing</h1>
+        <p className="mt-3 text-lg text-muted" data-testid="portfolio-subheading">Software Test Engineer | Manual QA | Automation</p>
+        <div className="mt-4" data-testid="portfolio-contact-links">
           <a href="mailto:chonlareeketkorwoingwork@gmail.com" data-testid="portfolio-email-link">[Email]</a>
           <span data-testid="portfolio-contact-separator"> | </span>
           <a href="https://github.com/HajimaruRay" data-testid="portfolio-github-link">[Github]</a>
@@ -78,11 +78,11 @@ export function PortfolioPage() {
       </section>
 
       {portfolioSections.map((section) => (
-        <section key={section.title} className="content-card" data-testid={`portfolio-section-${section.title.toLowerCase().replaceAll(' ', '-')}`}>
-          <h2 data-testid={`portfolio-section-heading-${section.title.toLowerCase().replaceAll(' ', '-')}`}>{section.title}</h2>
-          <div data-testid={`portfolio-section-content-${section.title.toLowerCase().replaceAll(' ', '-')}`}>
+        <section key={section.title} className="mx-auto mb-6 max-w-5xl rounded-xl border border-line/70 bg-white p-6 shadow-sm sm:p-8" data-testid={`portfolio-section-${section.title.toLowerCase().replaceAll(' ', '-')}`}>
+          <h2 className="m-0 font-display text-2xl font-semibold text-ink" data-testid={`portfolio-section-heading-${section.title.toLowerCase().replaceAll(' ', '-')}`}>{section.title}</h2>
+          <div className="mt-5 flex flex-col gap-2" data-testid={`portfolio-section-content-${section.title.toLowerCase().replaceAll(' ', '-')}`}>
             {section.content.map((item, index) => (
-              <p key={`${section.title}-${index}`} data-testid={`portfolio-item-${section.title.toLowerCase().replaceAll(' ', '-')}-${index}`}>{item}</p>
+              <p className="m-0 leading-relaxed text-muted" key={`${section.title}-${index}`} data-testid={`portfolio-item-${section.title.toLowerCase().replaceAll(' ', '-')}-${index}`}>{item}</p>
             ))}
           </div>
         </section>
