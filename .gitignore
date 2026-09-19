@@ -12,11 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Local API configuration
+config/.env.ts
+config/.endpoint.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+*._*
 *.suo
 *.ntvs*
 *.njsproj
