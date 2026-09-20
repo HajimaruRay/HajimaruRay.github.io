@@ -13,7 +13,7 @@ export function ProfilePage() {
           <h3 className="mb-3 mt-8 font-display text-2xl font-semibold text-ink" data-testid="profile-about-heading">About Me!</h3>
           <hr data-testid="profile-about-divider" />
           <div data-testid="profile-about-content">
-            <p className="my-2 text-base leading-relaxed text-muted" data-testid="profile-about-student">- Student at Silpakorn University | Computer Science | 3rd Years</p>
+            <p className="my-2 text-base leading-relaxed text-muted" data-testid="profile-about-student">- Student at Silpakorn University | Computer Science | 4th Years</p>
             <p className="my-2 text-base leading-relaxed text-muted" data-testid="profile-about-location">- 🌍 Based in Nonthaburi, Thailand</p>
             <p className="my-2 text-base leading-relaxed text-muted" data-testid="profile-about-contact">
               - ✉️ You can contract me at [
@@ -22,14 +22,14 @@ export function ProfilePage() {
             </p>
           </div>
 
-          <h3 className="mb-3 mt-8 font-display text-2xl font-semibold text-ink" data-testid="profile-programming-heading">Programming Languages</h3>
+          {/* <h3 className="mb-3 mt-8 font-display text-2xl font-semibold text-ink" data-testid="profile-programming-heading">Programming Languages</h3>
           <hr data-testid="profile-programming-divider" />
           <div className="flex flex-wrap gap-3 pt-2" data-testid="profile-programming-links">
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://www.java.com" target="_blank" rel="noreferrer" data-testid="profile-java-link"><img className="h-10 w-10 object-contain" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" data-testid="profile-java-image" /></a>
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" target="_blank" rel="noreferrer" data-testid="profile-c-link"><img className="h-10 w-10 object-contain" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" data-testid="profile-c-image" /></a>
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" rel="noreferrer" data-testid="profile-csharp-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/c-programming-language-logo-microsoft-visual-studio-net-framework-png-favpng-WLLTMqZhSPAk9q3DTh993fZnh.jpg" alt="C#" data-testid="profile-csharp-image" /></a>
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://www.python.org" target="_blank" rel="noreferrer" data-testid="profile-python-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/Python-logo-notext.svg.webp" alt="Python" data-testid="profile-python-image" /></a>
-          </div>
+          </div> */}
 
           <h3 className="mb-3 mt-8 font-display text-2xl font-semibold text-ink" data-testid="profile-web-heading">Web Development</h3>
           <hr data-testid="profile-web-divider" />
@@ -46,8 +46,13 @@ export function ProfilePage() {
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://code.visualstudio.com" target="_blank" rel="noreferrer" data-testid="profile-vscode-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/Visual_Studio_Code_1.35_icon.svg.png" alt="VS Code" data-testid="profile-vscode-image" /></a>
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://github.com" target="_blank" rel="noreferrer" data-testid="profile-github-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/Github.png" alt="GitHub" data-testid="profile-github-image" /></a>
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://unity.com/" target="_blank" rel="noreferrer" data-testid="profile-unity-link"><img className="h-10 w-10 object-contain" src="https://files.rubixdev.de/logos/unity.svg" alt="Unity" data-testid="profile-unity-image" /></a>
-            <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://jupyter.org" target="_blank" rel="noreferrer" data-testid="profile-jupyter-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/Jupyter_logo.svg.png" alt="Jupyter" data-testid="profile-jupyter-image" /></a>
+            <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://jupyter.org" target="_blank" rel="noreferrer" data-testid="profile-jupyter-link"><img className="h-10 w-10 object-contain" src="/Photo/icon/Jupyter_logo.svg.png" alt="Jupyter" data-testid="profile-jupyter-image" /></a>          </div>
+
+          <h3 className="mb-3 mt-8 font-display text-2xl font-semibold text-ink" data-testid="profile-softwareTester-heading">Software Tester</h3>
+          <hr data-testid="profile-softwareTester-divider" />
+          <div className="flex flex-wrap gap-3 pt-2" data-testid="profile-softwareTester-links">
             <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://www.cypress.io" target="_blank" rel="noreferrer" data-testid="profile-cypress-link"><img className="h-10 w-10 object-contain" src="https://iconape.com/wp-content/files/gj/370774/svg/370774.svg" alt="Cypress" data-testid="profile-cypress-image" /></a>
+            <a className="rounded-lg border border-line bg-white p-2 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-md" href="https://playwright.dev/" target="_blank" rel="noreferrer" data-testid="profile-playwright-link"><img className="h-10 w-10 object-contain" src="https://cdn.brandfetch.io/domain/playwright.dev/fallback/lettermark/theme/dark/h/400/w/400/icon?c=1bfwsmEH20zzEfSNTed" alt="Playwright" data-testid="profile-playwright-image" /></a>
           </div>
         </div>
       </div>

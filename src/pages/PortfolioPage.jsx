@@ -11,7 +11,7 @@ const portfolioSections = [
   {
     title: 'Internship Experience',
     content: [
-      'Software Tester (Intern) – Move Plus Co., Ltd. (Oct 2025 – Present)',
+      'Software Tester (Intern) - Move Plus Co., Ltd. (Oct 2025 - Present)',
       '• Designed and executed manual test cases based on system requirements',
       '• Performed functional and regression testing on web applications',
       '• Reported bugs and tracked issues using testing and documentation tools',

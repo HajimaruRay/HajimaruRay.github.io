@@ -9,7 +9,7 @@ export function HomePage() {
         <h1 className="m-0 font-display text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-ink sm:text-7xl lg:text-8xl" data-testid="home-heading">
           I&apos;m Chonlatree <br data-testid="home-heading-break" /> Ketkorwoing
         </h1>
-        <h3 className="mx-auto mt-7 max-w-2xl text-lg font-medium leading-relaxed text-muted sm:text-2xl" data-testid="home-subheading">Computer Science student, Silpakorn University, 3rd year</h3>
+        <h3 className="mx-auto mt-7 max-w-2xl text-lg font-medium leading-relaxed text-muted sm:text-2xl" data-testid="home-subheading">Computer Science student, Silpakorn University, 4th year</h3>
         <button type="button" className="mt-8 cursor-pointer rounded-md border border-ink bg-ink px-5 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-slate-700" onClick={() => navigate('/profile')} data-testid="home-profile-button">
           View Profile!
         </button>
