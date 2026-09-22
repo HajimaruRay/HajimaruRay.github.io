@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { Navigate, useNavigate, useOutletContext } from 'react-router-dom'
 import { loginUser, healthCheck } from '../services/authApi'
 
 export function LoginPage() {
+  const navigate = useNavigate()
+  const { setUserId } = useOutletContext()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -16,13 +19,22 @@ export function LoginPage() {
     setIsSubmitting(true)
 
     try {
-      // The API should return a token when authentication succeeds.
       const data = await loginUser(username, password)
+      if (data.status !== 'success') {
+        throw new Error(data.message || 'Login failed')
+      }
       if (data.token) {
         sessionStorage.setItem('authToken', data.token)
       }
+      const userId = data.user?.id ?? null
+      if (userId !== null) {
+        sessionStorage.setItem('userId', userId)
+      } else {
+        sessionStorage.removeItem('userId')
+      }
+      setUserId(userId)
       sessionStorage.setItem('isLogin', 'true')
-      setMessage('Login successful')
+      navigate('/', { replace: true })
     } catch (error) {
       if (error.status === 404) {
         setMessage('Login endpoint was not found')
@@ -52,6 +64,10 @@ export function LoginPage() {
     } finally {
       setIsHealthClick(false)
     }
+  }
+
+  if (sessionStorage.getItem('isLogin') === 'true') {
+    return <Navigate to="/" replace />
   }
 
   return (

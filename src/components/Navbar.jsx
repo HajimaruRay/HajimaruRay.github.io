@@ -1,9 +1,11 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { navItems } from '../data/navigation'
 
-export function Navbar() {
+export function Navbar({ userId, onLogout }) {
   const navigate = useNavigate()
   const location = useLocation()
+  const isLoggedIn = sessionStorage.getItem('isLogin') === 'true'
+  const visibleNavItems = navItems.filter((item) => !isLoggedIn || item.to !== '/login')
 
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-ink px-5 py-4 text-white shadow-lg shadow-slate-950/10" data-testid="navbar">
@@ -20,15 +22,21 @@ export function Navbar() {
         aria-label="Navigation"
         data-testid="navbar-mobile-select"
       >
-        {navItems.map((item) => (
+        {visibleNavItems.map((item) => (
           <option key={item.to} value={item.to} data-testid={`navbar-mobile-option-${item.to.slice(1) || 'home'}`}>
             {item.label}
           </option>
         ))}
       </select>
 
+      {isLoggedIn && userId && (
+        <button type="button" onClick={onLogout} aria-label={`Log out ${userId}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 md:hidden" data-testid="navbar-mobile-user-id">
+          {userId}
+        </button>
+      )}
+
       <nav className="hidden items-center gap-5 md:flex" aria-label="Main navigation" data-testid="navbar-desktop-nav">
-        {navItems.map((item) => (
+        {visibleNavItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
@@ -40,6 +48,11 @@ export function Navbar() {
             {item.label}
           </NavLink>
         ))}
+        {isLoggedIn && userId && (
+          <button type="button" onClick={onLogout} aria-label={`Log out ${userId}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300" data-testid="navbar-user-id">
+            {userId}
+          </button>
+        )}
       </nav>
     </header>
   )
