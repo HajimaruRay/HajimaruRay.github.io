@@ -1,7 +1,7 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { navItems } from '../data/navigation'
 
-export function Navbar({ userId, onLogout }) {
+export function Navbar({ userName, onLogout }) {
   const navigate = useNavigate()
   const location = useLocation()
   const isLoggedIn = sessionStorage.getItem('isLogin') === 'true'
@@ -29,9 +29,9 @@ export function Navbar({ userId, onLogout }) {
         ))}
       </select>
 
-      {isLoggedIn && userId && (
-        <button type="button" onClick={onLogout} aria-label={`Log out ${userId}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 md:hidden" data-testid="navbar-mobile-user-id">
-          {userId}
+      {isLoggedIn && userName && (
+        <button type="button" onClick={onLogout} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 md:hidden" data-testid="navbar-mobile-user-id">
+          {userName}
         </button>
       )}
 
@@ -48,9 +48,9 @@ export function Navbar({ userId, onLogout }) {
             {item.label}
           </NavLink>
         ))}
-        {isLoggedIn && userId && (
-          <button type="button" onClick={onLogout} aria-label={`Log out ${userId}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300" data-testid="navbar-user-id">
-            {userId}
+        {isLoggedIn && userName && (
+          <button type="button" onClick={onLogout} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300" data-testid="navbar-user-id">
+            {userName}
           </button>
         )}
       </nav>

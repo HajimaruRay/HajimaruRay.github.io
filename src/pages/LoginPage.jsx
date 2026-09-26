@@ -4,7 +4,7 @@ import { loginUser, healthCheck } from '../services/authApi'
 
 export function LoginPage() {
   const navigate = useNavigate()
-  const { setUserId } = useOutletContext()
+  const { setUserName } = useOutletContext()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -26,13 +26,13 @@ export function LoginPage() {
       if (data.token) {
         sessionStorage.setItem('authToken', data.token)
       }
-      const userId = data.user?.id ?? null
-      if (userId !== null) {
-        sessionStorage.setItem('userId', userId)
+      const userName = data.userName ?? data.user?.userName ?? null
+      if (userName !== null) {
+        sessionStorage.setItem('userName', userName)
       } else {
-        sessionStorage.removeItem('userId')
+        sessionStorage.removeItem('userName')
       }
-      setUserId(userId)
+      setUserName(userName)
       sessionStorage.setItem('isLogin', 'true')
       navigate('/', { replace: true })
     } catch (error) {

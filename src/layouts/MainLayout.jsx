@@ -4,21 +4,21 @@ import { Navbar } from '../components/Navbar'
 import { ContactFooter } from '../components/ContactFooter'
 
 export function MainLayout() {
-  const [userId, setUserId] = useState(() =>
-    sessionStorage.getItem('isLogin') === 'true' ? sessionStorage.getItem('userId') : null
+  const [userName, setUserName] = useState(() =>
+    sessionStorage.getItem('isLogin') === 'true' ? sessionStorage.getItem('userName') : null
   )
 
   const handleLogout = () => {
     sessionStorage.setItem('isLogin', 'false')
-    sessionStorage.removeItem('userId')
+    sessionStorage.removeItem('userName')
     sessionStorage.removeItem('authToken')
-    setUserId(null)
+    setUserName(null)
   }
 
   return (
     <div className="flex min-h-screen flex-col bg-paper" data-testid="app-shell">
-      <Navbar userId={userId} onLogout={handleLogout} />
-      <Outlet context={{ setUserId }} />
+      <Navbar userName={userName} onLogout={handleLogout} />
+      <Outlet context={{ setUserName }} />
       <ContactFooter />
     </div>
   )
