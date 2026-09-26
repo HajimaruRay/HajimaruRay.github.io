@@ -1,7 +1,7 @@
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { navItems } from '../data/navigation'
 
-export function Navbar({ userName, onLogout }) {
+export function Navbar({ userName, isLoggingOut, onLogout }) {
   const navigate = useNavigate()
   const location = useLocation()
   const isLoggedIn = sessionStorage.getItem('isLogin') === 'true'
@@ -30,9 +30,11 @@ export function Navbar({ userName, onLogout }) {
       </select>
 
       {isLoggedIn && userName && (
-        <button type="button" onClick={onLogout} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 md:hidden" data-testid="navbar-mobile-user-id">
-          {userName}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button type="button" onClick={onLogout} disabled={isLoggingOut} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 disabled:cursor-not-allowed disabled:opacity-60" data-testid="navbar-mobile-user-id">
+            {isLoggingOut ? 'Logging out...' : userName}
+          </button>
+        </div>
       )}
 
       <nav className="hidden items-center gap-5 md:flex" aria-label="Main navigation" data-testid="navbar-desktop-nav">
@@ -49,8 +51,8 @@ export function Navbar({ userName, onLogout }) {
           </NavLink>
         ))}
         {isLoggedIn && userName && (
-          <button type="button" onClick={onLogout} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300" data-testid="navbar-user-id">
-            {userName}
+          <button type="button" onClick={onLogout} disabled={isLoggingOut} aria-label={`Log out ${userName}`} className="cursor-pointer border-0 bg-transparent p-0 text-sm font-medium text-white hover:text-orange-300 disabled:cursor-not-allowed disabled:opacity-60" data-testid="navbar-user-id">
+            {isLoggingOut ? 'Logging out...' : userName}
           </button>
         )}
       </nav>

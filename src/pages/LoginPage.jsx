@@ -27,10 +27,16 @@ export function LoginPage() {
         sessionStorage.setItem('authToken', data.token)
       }
       const userName = data.userName ?? data.user?.userName ?? null
+      const userId = data.user?.id ?? data.userId ?? null
       if (userName !== null) {
         sessionStorage.setItem('userName', userName)
       } else {
         sessionStorage.removeItem('userName')
+      }
+      if (userId !== null) {
+        sessionStorage.setItem('userId', userId)
+      } else {
+        sessionStorage.removeItem('userId')
       }
       setUserName(userName)
       sessionStorage.setItem('isLogin', 'true')
@@ -59,7 +65,7 @@ export function LoginPage() {
         setTimeout(resolve, 1 * 1000)
       }) // Simulate a delay for better UX
       setHealthStatus(healthMessage)
-    } catch (error) {
+    } catch {
       setHealthStatus('Health check failed')
     } finally {
       setIsHealthClick(false)

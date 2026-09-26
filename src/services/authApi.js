@@ -52,3 +52,35 @@ export async function loginUser(username, password) {
     }
   }
 }
+
+export async function logoutUser(userId) {
+  try {
+    const response = await fetch(`${baseurl.apiBaseUrl.dev}${endpoints.logout}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ userId }),
+    })
+
+    const data = await response.json().catch(() => ({}))
+
+    if (!response.ok) {
+      throw {
+        status: response.status,
+        message: data.message || 'Logout failed. Please try again.',
+      }
+    }
+
+    return data
+  } catch (error) {
+    if (error?.status) {
+      throw error
+    }
+
+    throw {
+      status: 0,
+      message: 'Unable to connect to server.',
+    }
+  }
+}
